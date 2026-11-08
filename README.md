@@ -91,7 +91,7 @@ Evaluated on realistic multi-phase microservice chaos logs (Nominal $\to$ Satura
 ### 1. Run the Platform Locally
 ```bash
 # 1. Clone repository
-git clone https://github.com/your-username/Tracemind.git
+git clone https://github.com/ShanksB2006/Tracemind.git
 cd Tracemind
 
 # 2. Run automated verification suite & SEO audit
