@@ -9,9 +9,9 @@ venv/
 env/
 
 # Distribution / packaging
-dist/
 build/
 *.egg-info/
+!frontend/dist/
 
 # Frontend dependencies
 node_modules/
