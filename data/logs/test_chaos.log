@@ -1,0 +1,535 @@
+2026-11-08 08:18:16.024 [INFO    ] [auth-service] [trace=b538e6a0d23b span=671e7cf8] status=200 latency=20.8ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.024 [DEBUG   ] [postgres-db] [trace=b538e6a0d23b span=7134294d] status=200 latency=12.4ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.024 [INFO    ] [payment-service] [trace=b538e6a0d23b span=b7d066de] status=200 latency=128.4ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.024 [INFO    ] [order-service] [trace=b538e6a0d23b span=67e6c72c] status=200 latency=166.2ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.024 [INFO    ] [api-gateway] [trace=b538e6a0d23b span=b4c60dcf] status=200 latency=176.2ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.024 [INFO    ] [auth-service] [trace=4f0acae56c40 span=749bf985] status=200 latency=16.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.024 [DEBUG   ] [postgres-db] [trace=4f0acae56c40 span=bae36b83] status=200 latency=25.8ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.024 [INFO    ] [payment-service] [trace=4f0acae56c40 span=8e9b30a7] status=200 latency=116.1ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.024 [INFO    ] [order-service] [trace=4f0acae56c40 span=1d88cb7d] status=200 latency=150.3ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.024 [INFO    ] [api-gateway] [trace=4f0acae56c40 span=a5cbd0e4] status=200 latency=160.3ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.024 [INFO    ] [auth-service] [trace=67261f9e659d span=10b6d451] status=200 latency=15.7ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.024 [DEBUG   ] [postgres-db] [trace=67261f9e659d span=75fe6b5c] status=200 latency=13.2ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.024 [INFO    ] [payment-service] [trace=67261f9e659d span=cfcb876e] status=200 latency=93.0ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.024 [INFO    ] [order-service] [trace=67261f9e659d span=aa44f591] status=200 latency=123.6ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.024 [INFO    ] [api-gateway] [trace=67261f9e659d span=afc35191] status=200 latency=133.6ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.035 [INFO    ] [auth-service] [trace=112b97d96fce span=73fe5a26] status=200 latency=20.8ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.035 [DEBUG   ] [postgres-db] [trace=112b97d96fce span=07adc9f6] status=200 latency=21.9ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.035 [INFO    ] [payment-service] [trace=112b97d96fce span=819cb44b] status=200 latency=140.0ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.035 [INFO    ] [order-service] [trace=112b97d96fce span=3b44be97] status=200 latency=181.6ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.035 [INFO    ] [api-gateway] [trace=112b97d96fce span=d6957689] status=200 latency=191.6ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.035 [INFO    ] [auth-service] [trace=b732b2e5cb1c span=956ac8f2] status=200 latency=19.5ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.035 [DEBUG   ] [postgres-db] [trace=b732b2e5cb1c span=e39aa287] status=200 latency=21.6ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.035 [INFO    ] [payment-service] [trace=b732b2e5cb1c span=3727fd54] status=200 latency=110.8ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.035 [INFO    ] [order-service] [trace=b732b2e5cb1c span=07f1ec3d] status=200 latency=142.9ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.035 [INFO    ] [api-gateway] [trace=b732b2e5cb1c span=3d8cfce3] status=200 latency=152.9ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.035 [INFO    ] [auth-service] [trace=21c5d9fdf868 span=8d99c621] status=200 latency=14.0ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.035 [DEBUG   ] [postgres-db] [trace=21c5d9fdf868 span=9ead4402] status=200 latency=18.7ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.035 [INFO    ] [payment-service] [trace=21c5d9fdf868 span=e033aaaa] status=200 latency=94.4ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.035 [INFO    ] [order-service] [trace=21c5d9fdf868 span=bbd75fa1] status=200 latency=130.7ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.035 [INFO    ] [api-gateway] [trace=21c5d9fdf868 span=5911e6dd] status=200 latency=140.7ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.035 [INFO    ] [auth-service] [trace=9925c1c57a34 span=d3425662] status=200 latency=19.0ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.035 [DEBUG   ] [postgres-db] [trace=9925c1c57a34 span=aeaa1b8e] status=200 latency=25.1ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.035 [INFO    ] [payment-service] [trace=9925c1c57a34 span=9aefbc43] status=200 latency=105.5ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.035 [INFO    ] [order-service] [trace=9925c1c57a34 span=1fc05754] status=200 latency=135.7ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.035 [INFO    ] [api-gateway] [trace=9925c1c57a34 span=7e444166] status=200 latency=145.7ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.035 [INFO    ] [auth-service] [trace=51b6ffecac8e span=c4541147] status=200 latency=8.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.035 [DEBUG   ] [postgres-db] [trace=51b6ffecac8e span=8194d607] status=200 latency=20.5ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.035 [INFO    ] [payment-service] [trace=51b6ffecac8e span=5982130c] status=200 latency=102.8ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.035 [INFO    ] [order-service] [trace=51b6ffecac8e span=aad81cdb] status=200 latency=133.8ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.035 [INFO    ] [api-gateway] [trace=51b6ffecac8e span=295d9da0] status=200 latency=143.8ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.035 [INFO    ] [auth-service] [trace=423968d02151 span=e96c9cfa] status=200 latency=20.1ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.035 [DEBUG   ] [postgres-db] [trace=423968d02151 span=91f74902] status=200 latency=18.3ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.035 [INFO    ] [payment-service] [trace=423968d02151 span=115c597e] status=200 latency=105.7ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.035 [INFO    ] [order-service] [trace=423968d02151 span=ffbdbca0] status=200 latency=144.3ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.035 [INFO    ] [api-gateway] [trace=423968d02151 span=7384bc1e] status=200 latency=154.3ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.045 [INFO    ] [auth-service] [trace=cb429a915a56 span=939f4eaa] status=200 latency=16.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.045 [DEBUG   ] [postgres-db] [trace=cb429a915a56 span=45d0dc9f] status=200 latency=31.0ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.045 [INFO    ] [payment-service] [trace=cb429a915a56 span=aa8b2faf] status=200 latency=106.4ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.045 [INFO    ] [order-service] [trace=cb429a915a56 span=49381d4c] status=200 latency=148.5ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.045 [INFO    ] [api-gateway] [trace=cb429a915a56 span=6fc8cf56] status=200 latency=158.5ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.045 [INFO    ] [auth-service] [trace=2820c987053f span=0867143a] status=200 latency=22.0ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.045 [DEBUG   ] [postgres-db] [trace=2820c987053f span=5c5a7573] status=200 latency=25.0ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.045 [INFO    ] [payment-service] [trace=2820c987053f span=d685194f] status=200 latency=133.5ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.045 [INFO    ] [order-service] [trace=2820c987053f span=9fcd6d10] status=200 latency=166.6ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.045 [INFO    ] [api-gateway] [trace=2820c987053f span=7ab45721] status=200 latency=176.6ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.045 [INFO    ] [auth-service] [trace=c885f42421fb span=ab0d676c] status=200 latency=16.3ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.045 [DEBUG   ] [postgres-db] [trace=c885f42421fb span=077895c5] status=200 latency=34.9ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.045 [INFO    ] [payment-service] [trace=c885f42421fb span=71830977] status=200 latency=116.6ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.045 [INFO    ] [order-service] [trace=c885f42421fb span=6b32f666] status=200 latency=145.0ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.045 [INFO    ] [api-gateway] [trace=c885f42421fb span=d5111255] status=200 latency=155.0ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.056 [INFO    ] [auth-service] [trace=cb228fe722a7 span=e58e0d47] status=200 latency=10.4ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.056 [DEBUG   ] [postgres-db] [trace=cb228fe722a7 span=5a68130d] status=200 latency=12.3ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.056 [INFO    ] [payment-service] [trace=cb228fe722a7 span=1fabb0b0] status=200 latency=106.9ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.056 [INFO    ] [order-service] [trace=cb228fe722a7 span=a867cf06] status=200 latency=150.2ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.056 [INFO    ] [api-gateway] [trace=cb228fe722a7 span=ff3fecf2] status=200 latency=160.2ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.056 [INFO    ] [auth-service] [trace=ec141a4a8bb7 span=1663e27d] status=200 latency=11.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.056 [DEBUG   ] [postgres-db] [trace=ec141a4a8bb7 span=d455cbfc] status=200 latency=24.7ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.056 [INFO    ] [payment-service] [trace=ec141a4a8bb7 span=02cc14a0] status=200 latency=116.3ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.056 [INFO    ] [order-service] [trace=ec141a4a8bb7 span=fd5bd3ae] status=200 latency=142.0ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.056 [INFO    ] [api-gateway] [trace=ec141a4a8bb7 span=1df7b0a4] status=200 latency=152.0ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.056 [INFO    ] [auth-service] [trace=a33d88af825f span=01158398] status=200 latency=21.2ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.056 [DEBUG   ] [postgres-db] [trace=a33d88af825f span=b518d6a0] status=200 latency=14.7ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.056 [INFO    ] [payment-service] [trace=a33d88af825f span=ab08d9d3] status=200 latency=124.9ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.056 [INFO    ] [order-service] [trace=a33d88af825f span=f61d3ae1] status=200 latency=150.6ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.056 [INFO    ] [api-gateway] [trace=a33d88af825f span=09bd148d] status=200 latency=160.6ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.056 [INFO    ] [auth-service] [trace=adb73ec168ed span=401b4292] status=200 latency=21.6ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.056 [DEBUG   ] [postgres-db] [trace=adb73ec168ed span=3eb9b215] status=200 latency=30.7ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.056 [INFO    ] [payment-service] [trace=adb73ec168ed span=5c50af8c] status=200 latency=104.3ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.056 [INFO    ] [order-service] [trace=adb73ec168ed span=11afbd43] status=200 latency=144.4ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.056 [INFO    ] [api-gateway] [trace=adb73ec168ed span=6991c5cc] status=200 latency=154.4ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.067 [INFO    ] [auth-service] [trace=46b6e30bbd21 span=36c52a3d] status=200 latency=17.6ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.067 [DEBUG   ] [postgres-db] [trace=46b6e30bbd21 span=a1f9f7eb] status=200 latency=12.8ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.067 [INFO    ] [payment-service] [trace=46b6e30bbd21 span=3c728eec] status=200 latency=136.7ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.067 [INFO    ] [order-service] [trace=46b6e30bbd21 span=2beccc14] status=200 latency=181.0ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.067 [INFO    ] [api-gateway] [trace=46b6e30bbd21 span=09b2d2b4] status=200 latency=191.0ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.067 [INFO    ] [auth-service] [trace=966d676e66e2 span=d5b2e784] status=200 latency=21.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.067 [DEBUG   ] [postgres-db] [trace=966d676e66e2 span=3ffbb279] status=200 latency=20.2ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.067 [INFO    ] [payment-service] [trace=966d676e66e2 span=49a86a4b] status=200 latency=124.3ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.067 [INFO    ] [order-service] [trace=966d676e66e2 span=5c25965d] status=200 latency=161.0ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.067 [INFO    ] [api-gateway] [trace=966d676e66e2 span=fc4dde33] status=200 latency=171.0ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.067 [INFO    ] [auth-service] [trace=adbe2e8eff9c span=f0917b37] status=200 latency=13.3ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.067 [DEBUG   ] [postgres-db] [trace=adbe2e8eff9c span=4804e572] status=200 latency=13.6ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.067 [INFO    ] [payment-service] [trace=adbe2e8eff9c span=e2753574] status=200 latency=104.5ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.067 [INFO    ] [order-service] [trace=adbe2e8eff9c span=29c7285a] status=200 latency=154.3ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.067 [INFO    ] [api-gateway] [trace=adbe2e8eff9c span=f8dbfad4] status=200 latency=164.3ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.067 [INFO    ] [auth-service] [trace=eb317980195e span=55a989af] status=200 latency=15.8ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.067 [DEBUG   ] [postgres-db] [trace=eb317980195e span=aaebd918] status=200 latency=30.0ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.067 [INFO    ] [payment-service] [trace=eb317980195e span=830a2151] status=200 latency=124.7ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.067 [INFO    ] [order-service] [trace=eb317980195e span=c99b296d] status=200 latency=157.9ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.067 [INFO    ] [api-gateway] [trace=eb317980195e span=221f92ef] status=200 latency=167.9ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.067 [INFO    ] [auth-service] [trace=a9a004e0cb3c span=5024ff1c] status=200 latency=10.7ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.067 [DEBUG   ] [postgres-db] [trace=a9a004e0cb3c span=7d33f171] status=200 latency=24.3ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.067 [INFO    ] [payment-service] [trace=a9a004e0cb3c span=d35a54b8] status=200 latency=101.8ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.067 [INFO    ] [order-service] [trace=a9a004e0cb3c span=6d49ed19] status=200 latency=131.9ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.067 [INFO    ] [api-gateway] [trace=a9a004e0cb3c span=b4e75dab] status=200 latency=141.9ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.077 [INFO    ] [auth-service] [trace=c2b8826ffec2 span=215309e1] status=200 latency=17.2ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.077 [WARN    ] [postgres-db] [trace=c2b8826ffec2 span=5e288e7b] status=200 latency=931.2ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.077 [WARN    ] [payment-service] [trace=c2b8826ffec2 span=e6a91e1f] status=200 latency=1209.6ms - Slow query detected on payments table (duration=1209.6ms). Thread pool near capacity.
+2026-11-08 08:18:16.077 [INFO    ] [order-service] [trace=c2b8826ffec2 span=35fab58c] status=200 latency=1239.6ms - Order processed with elevated latency
+2026-11-08 08:18:16.077 [INFO    ] [api-gateway] [trace=c2b8826ffec2 span=11b6b71a] status=200 latency=1247.6ms - Request completed successfully
+2026-11-08 08:18:16.077 [INFO    ] [auth-service] [trace=6684b08420bd span=7816b0f7] status=200 latency=20.3ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.077 [WARN    ] [postgres-db] [trace=6684b08420bd span=c7ccb027] status=200 latency=859.0ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.077 [WARN    ] [payment-service] [trace=6684b08420bd span=ee2a3e4f] status=200 latency=1131.0ms - Slow query detected on payments table (duration=1131.0ms). Thread pool near capacity.
+2026-11-08 08:18:16.077 [INFO    ] [order-service] [trace=6684b08420bd span=80f11757] status=200 latency=1161.0ms - Order processed with elevated latency
+2026-11-08 08:18:16.077 [INFO    ] [api-gateway] [trace=6684b08420bd span=c5459223] status=200 latency=1169.0ms - Request completed successfully
+2026-11-08 08:18:16.077 [INFO    ] [auth-service] [trace=60ee07631eb8 span=95a2319d] status=200 latency=13.7ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.077 [WARN    ] [postgres-db] [trace=60ee07631eb8 span=74a6805b] status=200 latency=1003.9ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.077 [WARN    ] [payment-service] [trace=60ee07631eb8 span=56ed59f2] status=200 latency=1184.0ms - Slow query detected on payments table (duration=1184.0ms). Thread pool near capacity.
+2026-11-08 08:18:16.077 [INFO    ] [order-service] [trace=60ee07631eb8 span=0589692d] status=200 latency=1214.0ms - Order processed with elevated latency
+2026-11-08 08:18:16.077 [INFO    ] [api-gateway] [trace=60ee07631eb8 span=63a13364] status=200 latency=1222.0ms - Request completed successfully
+2026-11-08 08:18:16.077 [INFO    ] [auth-service] [trace=6d739e596171 span=93f9aace] status=200 latency=13.4ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.077 [WARN    ] [postgres-db] [trace=6d739e596171 span=ed117220] status=200 latency=449.9ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.077 [WARN    ] [payment-service] [trace=6d739e596171 span=04846344] status=200 latency=582.0ms - Slow query detected on payments table (duration=582.0ms). Thread pool near capacity.
+2026-11-08 08:18:16.077 [INFO    ] [order-service] [trace=6d739e596171 span=ac224d74] status=200 latency=612.0ms - Order processed with elevated latency
+2026-11-08 08:18:16.077 [INFO    ] [api-gateway] [trace=6d739e596171 span=dd8842a0] status=200 latency=620.0ms - Request completed successfully
+2026-11-08 08:18:16.077 [INFO    ] [auth-service] [trace=c34787e31194 span=3ed55928] status=200 latency=16.7ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.077 [WARN    ] [postgres-db] [trace=c34787e31194 span=34d30a05] status=200 latency=807.9ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.077 [WARN    ] [payment-service] [trace=c34787e31194 span=1975a197] status=200 latency=1030.0ms - Slow query detected on payments table (duration=1030.0ms). Thread pool near capacity.
+2026-11-08 08:18:16.077 [INFO    ] [order-service] [trace=c34787e31194 span=b5b03fe8] status=200 latency=1060.0ms - Order processed with elevated latency
+2026-11-08 08:18:16.077 [INFO    ] [api-gateway] [trace=c34787e31194 span=b0de8f39] status=200 latency=1068.0ms - Request completed successfully
+2026-11-08 08:18:16.088 [INFO    ] [auth-service] [trace=2ac7d963c8e1 span=3f14a47e] status=200 latency=11.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.088 [WARN    ] [postgres-db] [trace=2ac7d963c8e1 span=5017260c] status=200 latency=665.6ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.088 [WARN    ] [payment-service] [trace=2ac7d963c8e1 span=d2345d0c] status=200 latency=843.5ms - Slow query detected on payments table (duration=843.5ms). Thread pool near capacity.
+2026-11-08 08:18:16.088 [INFO    ] [order-service] [trace=2ac7d963c8e1 span=9286a62a] status=200 latency=873.5ms - Order processed with elevated latency
+2026-11-08 08:18:16.088 [INFO    ] [api-gateway] [trace=2ac7d963c8e1 span=af6f0985] status=200 latency=881.5ms - Request completed successfully
+2026-11-08 08:18:16.088 [INFO    ] [auth-service] [trace=c8ed73611c5a span=d8865bf1] status=200 latency=18.4ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.088 [WARN    ] [postgres-db] [trace=c8ed73611c5a span=546cb648] status=200 latency=533.1ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.088 [WARN    ] [payment-service] [trace=c8ed73611c5a span=61673e29] status=200 latency=775.0ms - Slow query detected on payments table (duration=775.0ms). Thread pool near capacity.
+2026-11-08 08:18:16.088 [INFO    ] [order-service] [trace=c8ed73611c5a span=84629fbc] status=200 latency=805.0ms - Order processed with elevated latency
+2026-11-08 08:18:16.088 [INFO    ] [api-gateway] [trace=c8ed73611c5a span=963f8fcf] status=200 latency=813.0ms - Request completed successfully
+2026-11-08 08:18:16.088 [INFO    ] [auth-service] [trace=d25db9a5f63d span=5a46c968] status=200 latency=18.7ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.088 [WARN    ] [postgres-db] [trace=d25db9a5f63d span=05a59f22] status=200 latency=406.7ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.088 [WARN    ] [payment-service] [trace=d25db9a5f63d span=1271814c] status=200 latency=578.1ms - Slow query detected on payments table (duration=578.1ms). Thread pool near capacity.
+2026-11-08 08:18:16.088 [INFO    ] [order-service] [trace=d25db9a5f63d span=484ede4a] status=200 latency=608.1ms - Order processed with elevated latency
+2026-11-08 08:18:16.088 [INFO    ] [api-gateway] [trace=d25db9a5f63d span=e335e429] status=200 latency=616.1ms - Request completed successfully
+2026-11-08 08:18:16.088 [INFO    ] [auth-service] [trace=5e29d5e9cb66 span=9e319329] status=200 latency=18.7ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.088 [WARN    ] [postgres-db] [trace=5e29d5e9cb66 span=670cd022] status=200 latency=626.2ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.088 [WARN    ] [payment-service] [trace=5e29d5e9cb66 span=649afa3b] status=200 latency=900.2ms - Slow query detected on payments table (duration=900.2ms). Thread pool near capacity.
+2026-11-08 08:18:16.088 [INFO    ] [order-service] [trace=5e29d5e9cb66 span=2d04b8cf] status=200 latency=930.2ms - Order processed with elevated latency
+2026-11-08 08:18:16.088 [INFO    ] [api-gateway] [trace=5e29d5e9cb66 span=b9f7decb] status=200 latency=938.2ms - Request completed successfully
+2026-11-08 08:18:16.088 [INFO    ] [auth-service] [trace=e37b73204e6b span=f90dc67d] status=200 latency=16.3ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.088 [WARN    ] [postgres-db] [trace=e37b73204e6b span=e472e2af] status=200 latency=417.1ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.088 [WARN    ] [payment-service] [trace=e37b73204e6b span=7ac97712] status=200 latency=644.1ms - Slow query detected on payments table (duration=644.1ms). Thread pool near capacity.
+2026-11-08 08:18:16.088 [INFO    ] [order-service] [trace=e37b73204e6b span=04568cf0] status=200 latency=674.1ms - Order processed with elevated latency
+2026-11-08 08:18:16.088 [INFO    ] [api-gateway] [trace=e37b73204e6b span=dd47df0b] status=200 latency=682.1ms - Request completed successfully
+2026-11-08 08:18:16.088 [INFO    ] [auth-service] [trace=2e4c8cbd5d51 span=ae84ea8c] status=200 latency=10.0ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.088 [WARN    ] [postgres-db] [trace=2e4c8cbd5d51 span=b5c3f3a3] status=200 latency=988.4ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.088 [WARN    ] [payment-service] [trace=2e4c8cbd5d51 span=df288ae9] status=200 latency=1270.5ms - Slow query detected on payments table (duration=1270.5ms). Thread pool near capacity.
+2026-11-08 08:18:16.088 [INFO    ] [order-service] [trace=2e4c8cbd5d51 span=aade6e0a] status=200 latency=1300.5ms - Order processed with elevated latency
+2026-11-08 08:18:16.088 [INFO    ] [api-gateway] [trace=2e4c8cbd5d51 span=cccb5ba9] status=200 latency=1308.5ms - Request completed successfully
+2026-11-08 08:18:16.088 [INFO    ] [auth-service] [trace=11b0d6c0d0f5 span=274df018] status=200 latency=8.8ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.088 [WARN    ] [postgres-db] [trace=11b0d6c0d0f5 span=20547657] status=200 latency=636.4ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.088 [WARN    ] [payment-service] [trace=11b0d6c0d0f5 span=c5ccb659] status=200 latency=865.4ms - Slow query detected on payments table (duration=865.4ms). Thread pool near capacity.
+2026-11-08 08:18:16.088 [INFO    ] [order-service] [trace=11b0d6c0d0f5 span=c2368aa0] status=200 latency=895.4ms - Order processed with elevated latency
+2026-11-08 08:18:16.088 [INFO    ] [api-gateway] [trace=11b0d6c0d0f5 span=0f7aecb3] status=200 latency=903.4ms - Request completed successfully
+2026-11-08 08:18:16.099 [INFO    ] [auth-service] [trace=6b6c538a578a span=d35409b8] status=200 latency=16.3ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.099 [WARN    ] [postgres-db] [trace=6b6c538a578a span=457550ca] status=200 latency=1057.0ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.099 [WARN    ] [payment-service] [trace=6b6c538a578a span=54569799] status=200 latency=1194.2ms - Slow query detected on payments table (duration=1194.2ms). Thread pool near capacity.
+2026-11-08 08:18:16.099 [INFO    ] [order-service] [trace=6b6c538a578a span=51cb4a57] status=200 latency=1224.2ms - Order processed with elevated latency
+2026-11-08 08:18:16.099 [INFO    ] [api-gateway] [trace=6b6c538a578a span=ba94be2c] status=200 latency=1232.2ms - Request completed successfully
+2026-11-08 08:18:16.099 [INFO    ] [auth-service] [trace=d27e54939fb3 span=1b1393b1] status=200 latency=12.1ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.099 [WARN    ] [postgres-db] [trace=d27e54939fb3 span=cb8d62dc] status=200 latency=782.1ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.099 [WARN    ] [payment-service] [trace=d27e54939fb3 span=e1ea003f] status=200 latency=1021.3ms - Slow query detected on payments table (duration=1021.3ms). Thread pool near capacity.
+2026-11-08 08:18:16.099 [INFO    ] [order-service] [trace=d27e54939fb3 span=399bd874] status=200 latency=1051.3ms - Order processed with elevated latency
+2026-11-08 08:18:16.099 [INFO    ] [api-gateway] [trace=d27e54939fb3 span=6f709200] status=200 latency=1059.3ms - Request completed successfully
+2026-11-08 08:18:16.099 [INFO    ] [auth-service] [trace=5756b07fb819 span=25e8b2aa] status=200 latency=20.3ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.099 [WARN    ] [postgres-db] [trace=5756b07fb819 span=6f1d9b98] status=200 latency=675.9ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.099 [WARN    ] [payment-service] [trace=5756b07fb819 span=1fe2382e] status=200 latency=866.7ms - Slow query detected on payments table (duration=866.7ms). Thread pool near capacity.
+2026-11-08 08:18:16.099 [INFO    ] [order-service] [trace=5756b07fb819 span=351f3764] status=200 latency=896.7ms - Order processed with elevated latency
+2026-11-08 08:18:16.099 [INFO    ] [api-gateway] [trace=5756b07fb819 span=0582cde9] status=200 latency=904.7ms - Request completed successfully
+2026-11-08 08:18:16.099 [INFO    ] [auth-service] [trace=cedd3e53411b span=d193c194] status=200 latency=14.1ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.099 [WARN    ] [postgres-db] [trace=cedd3e53411b span=e189e661] status=200 latency=405.3ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.099 [WARN    ] [payment-service] [trace=cedd3e53411b span=a2d2769a] status=200 latency=672.2ms - Slow query detected on payments table (duration=672.2ms). Thread pool near capacity.
+2026-11-08 08:18:16.099 [INFO    ] [order-service] [trace=cedd3e53411b span=8d9d659d] status=200 latency=702.2ms - Order processed with elevated latency
+2026-11-08 08:18:16.099 [INFO    ] [api-gateway] [trace=cedd3e53411b span=ef9e3de2] status=200 latency=710.2ms - Request completed successfully
+2026-11-08 08:18:16.099 [INFO    ] [auth-service] [trace=92acf6bd1348 span=f864e6bd] status=200 latency=19.5ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.099 [WARN    ] [postgres-db] [trace=92acf6bd1348 span=417cb5de] status=200 latency=963.9ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.099 [WARN    ] [payment-service] [trace=92acf6bd1348 span=0bb45fd2] status=200 latency=1229.3ms - Slow query detected on payments table (duration=1229.3ms). Thread pool near capacity.
+2026-11-08 08:18:16.099 [INFO    ] [order-service] [trace=92acf6bd1348 span=b3e7974e] status=200 latency=1259.3ms - Order processed with elevated latency
+2026-11-08 08:18:16.099 [INFO    ] [api-gateway] [trace=92acf6bd1348 span=7c3ea18b] status=200 latency=1267.3ms - Request completed successfully
+2026-11-08 08:18:16.099 [INFO    ] [auth-service] [trace=fb8ba05a97cf span=a81880d0] status=200 latency=20.6ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.099 [WARN    ] [postgres-db] [trace=fb8ba05a97cf span=2921dbeb] status=200 latency=714.9ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.099 [WARN    ] [payment-service] [trace=fb8ba05a97cf span=2e9bd802] status=200 latency=947.5ms - Slow query detected on payments table (duration=947.5ms). Thread pool near capacity.
+2026-11-08 08:18:16.099 [INFO    ] [order-service] [trace=fb8ba05a97cf span=292edb6b] status=200 latency=977.5ms - Order processed with elevated latency
+2026-11-08 08:18:16.099 [INFO    ] [api-gateway] [trace=fb8ba05a97cf span=5aa682ef] status=200 latency=985.5ms - Request completed successfully
+2026-11-08 08:18:16.099 [INFO    ] [auth-service] [trace=1313c7715356 span=eaae7db9] status=200 latency=20.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.099 [WARN    ] [postgres-db] [trace=1313c7715356 span=1144b4c2] status=200 latency=895.8ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.099 [WARN    ] [payment-service] [trace=1313c7715356 span=e6009416] status=200 latency=1156.8ms - Slow query detected on payments table (duration=1156.8ms). Thread pool near capacity.
+2026-11-08 08:18:16.099 [INFO    ] [order-service] [trace=1313c7715356 span=66128489] status=200 latency=1186.8ms - Order processed with elevated latency
+2026-11-08 08:18:16.099 [INFO    ] [api-gateway] [trace=1313c7715356 span=3c228ca9] status=200 latency=1194.8ms - Request completed successfully
+2026-11-08 08:18:16.109 [INFO    ] [auth-service] [trace=3f563e027e40 span=669023ec] status=200 latency=21.4ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.109 [WARN    ] [postgres-db] [trace=3f563e027e40 span=965ccd1b] status=200 latency=519.8ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.109 [WARN    ] [payment-service] [trace=3f563e027e40 span=a92ea2de] status=200 latency=645.0ms - Slow query detected on payments table (duration=645.0ms). Thread pool near capacity.
+2026-11-08 08:18:16.109 [INFO    ] [order-service] [trace=3f563e027e40 span=969835cf] status=200 latency=675.0ms - Order processed with elevated latency
+2026-11-08 08:18:16.109 [INFO    ] [api-gateway] [trace=3f563e027e40 span=544cab16] status=200 latency=683.0ms - Request completed successfully
+2026-11-08 08:18:16.109 [INFO    ] [auth-service] [trace=df665478d451 span=0fb9117b] status=200 latency=16.3ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.109 [WARN    ] [postgres-db] [trace=df665478d451 span=e47bc5ae] status=200 latency=845.2ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.109 [WARN    ] [payment-service] [trace=df665478d451 span=38cdff98] status=200 latency=1143.7ms - Slow query detected on payments table (duration=1143.7ms). Thread pool near capacity.
+2026-11-08 08:18:16.109 [INFO    ] [order-service] [trace=df665478d451 span=07c2bbb9] status=200 latency=1173.7ms - Order processed with elevated latency
+2026-11-08 08:18:16.109 [INFO    ] [api-gateway] [trace=df665478d451 span=68f76c7b] status=200 latency=1181.7ms - Request completed successfully
+2026-11-08 08:18:16.109 [INFO    ] [auth-service] [trace=1f7d9e5298c2 span=02877b9c] status=200 latency=10.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.109 [WARN    ] [postgres-db] [trace=1f7d9e5298c2 span=8940b9db] status=200 latency=598.9ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.109 [WARN    ] [payment-service] [trace=1f7d9e5298c2 span=21729010] status=200 latency=817.8ms - Slow query detected on payments table (duration=817.8ms). Thread pool near capacity.
+2026-11-08 08:18:16.109 [INFO    ] [order-service] [trace=1f7d9e5298c2 span=db62eace] status=200 latency=847.8ms - Order processed with elevated latency
+2026-11-08 08:18:16.109 [INFO    ] [api-gateway] [trace=1f7d9e5298c2 span=ee3a2cea] status=200 latency=855.8ms - Request completed successfully
+2026-11-08 08:18:16.109 [INFO    ] [auth-service] [trace=0e6df02a70fa span=dd21c45b] status=200 latency=15.7ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.109 [WARN    ] [postgres-db] [trace=0e6df02a70fa span=7dcf3f1a] status=200 latency=893.5ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.109 [WARN    ] [payment-service] [trace=0e6df02a70fa span=d377bbd5] status=200 latency=1075.6ms - Slow query detected on payments table (duration=1075.6ms). Thread pool near capacity.
+2026-11-08 08:18:16.109 [INFO    ] [order-service] [trace=0e6df02a70fa span=3fcad950] status=200 latency=1105.6ms - Order processed with elevated latency
+2026-11-08 08:18:16.109 [INFO    ] [api-gateway] [trace=0e6df02a70fa span=b038d3ef] status=200 latency=1113.6ms - Request completed successfully
+2026-11-08 08:18:16.120 [INFO    ] [auth-service] [trace=5763e5d6df8a span=17bd7473] status=200 latency=20.7ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.120 [WARN    ] [postgres-db] [trace=5763e5d6df8a span=d43bce72] status=200 latency=538.1ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.120 [WARN    ] [payment-service] [trace=5763e5d6df8a span=d1e49fc3] status=200 latency=778.6ms - Slow query detected on payments table (duration=778.6ms). Thread pool near capacity.
+2026-11-08 08:18:16.120 [INFO    ] [order-service] [trace=5763e5d6df8a span=510d3558] status=200 latency=808.6ms - Order processed with elevated latency
+2026-11-08 08:18:16.120 [INFO    ] [api-gateway] [trace=5763e5d6df8a span=c9a0d45e] status=200 latency=816.6ms - Request completed successfully
+2026-11-08 08:18:16.120 [INFO    ] [auth-service] [trace=e091082f65cb span=436f027e] status=200 latency=19.8ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.120 [WARN    ] [postgres-db] [trace=e091082f65cb span=b0f1ad8b] status=200 latency=586.7ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.120 [WARN    ] [payment-service] [trace=e091082f65cb span=da8df6ea] status=200 latency=800.7ms - Slow query detected on payments table (duration=800.7ms). Thread pool near capacity.
+2026-11-08 08:18:16.120 [INFO    ] [order-service] [trace=e091082f65cb span=628c7d88] status=200 latency=830.7ms - Order processed with elevated latency
+2026-11-08 08:18:16.120 [INFO    ] [api-gateway] [trace=e091082f65cb span=3918ee55] status=200 latency=838.7ms - Request completed successfully
+2026-11-08 08:18:16.120 [INFO    ] [auth-service] [trace=009dfab783a1 span=3505c37e] status=200 latency=10.5ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.120 [WARN    ] [postgres-db] [trace=009dfab783a1 span=67fdaca1] status=200 latency=720.5ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.120 [WARN    ] [payment-service] [trace=009dfab783a1 span=2e2c8a42] status=200 latency=845.0ms - Slow query detected on payments table (duration=845.0ms). Thread pool near capacity.
+2026-11-08 08:18:16.120 [INFO    ] [order-service] [trace=009dfab783a1 span=b2cbaff4] status=200 latency=875.0ms - Order processed with elevated latency
+2026-11-08 08:18:16.120 [INFO    ] [api-gateway] [trace=009dfab783a1 span=ae79120a] status=200 latency=883.0ms - Request completed successfully
+2026-11-08 08:18:16.120 [INFO    ] [auth-service] [trace=e3f6c2bd183d span=91d27bdc] status=200 latency=20.1ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.120 [WARN    ] [postgres-db] [trace=e3f6c2bd183d span=dee25de3] status=200 latency=1081.3ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.120 [WARN    ] [payment-service] [trace=e3f6c2bd183d span=6d554636] status=200 latency=1256.6ms - Slow query detected on payments table (duration=1256.6ms). Thread pool near capacity.
+2026-11-08 08:18:16.120 [INFO    ] [order-service] [trace=e3f6c2bd183d span=d2677a1c] status=200 latency=1286.6ms - Order processed with elevated latency
+2026-11-08 08:18:16.120 [INFO    ] [api-gateway] [trace=e3f6c2bd183d span=57c42d3e] status=200 latency=1294.6ms - Request completed successfully
+2026-11-08 08:18:16.120 [INFO    ] [auth-service] [trace=d0f070360b33 span=671933b3] status=200 latency=17.8ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.120 [WARN    ] [postgres-db] [trace=d0f070360b33 span=078bc511] status=200 latency=499.7ms - High connection pool utilization: 88/100 connections active. Query queue depth: 8
+2026-11-08 08:18:16.120 [WARN    ] [payment-service] [trace=d0f070360b33 span=83d4a7e3] status=200 latency=683.5ms - Slow query detected on payments table (duration=683.5ms). Thread pool near capacity.
+2026-11-08 08:18:16.120 [INFO    ] [order-service] [trace=d0f070360b33 span=6f1ac3a1] status=200 latency=713.5ms - Order processed with elevated latency
+2026-11-08 08:18:16.120 [INFO    ] [api-gateway] [trace=d0f070360b33 span=b6a5d2d4] status=200 latency=721.5ms - Request completed successfully
+2026-11-08 08:18:16.130 [INFO    ] [auth-service] [trace=f87287889558 span=776b11e0] status=200 latency=18.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.130 [CRITICAL] [postgres-db] [trace=f87287889558 span=b1df324d] status=503 latency=3853.2ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.130 [ERROR   ] [payment-service] [trace=f87287889558 span=86486d4b] status=500 latency=4835.2ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.130 [ERROR   ] [order-service] [trace=f87287889558 span=cd960d52] status=504 latency=4893.9ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.130 [WARN    ] [api-gateway] [trace=f87287889558 span=7674f9eb] status=504 latency=4908.9ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.130 [INFO    ] [auth-service] [trace=be07a0d6b935 span=86bb7ad5] status=200 latency=17.2ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.130 [CRITICAL] [postgres-db] [trace=be07a0d6b935 span=8eea525d] status=503 latency=4504.1ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.130 [ERROR   ] [payment-service] [trace=be07a0d6b935 span=768f4580] status=500 latency=4703.2ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.130 [ERROR   ] [order-service] [trace=be07a0d6b935 span=8ddfa61f] status=504 latency=4764.8ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.130 [WARN    ] [api-gateway] [trace=be07a0d6b935 span=3997dfab] status=504 latency=4779.8ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.130 [INFO    ] [auth-service] [trace=53600d2fcbb2 span=78100759] status=200 latency=16.7ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.130 [CRITICAL] [postgres-db] [trace=53600d2fcbb2 span=c52ec734] status=503 latency=3865.8ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.130 [ERROR   ] [payment-service] [trace=53600d2fcbb2 span=ab4d33c7] status=500 latency=4906.8ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.130 [ERROR   ] [order-service] [trace=53600d2fcbb2 span=63bed06c] status=504 latency=4992.7ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.130 [WARN    ] [api-gateway] [trace=53600d2fcbb2 span=094949a2] status=504 latency=5007.7ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.130 [INFO    ] [auth-service] [trace=d4c25786c9bf span=defc1e85] status=200 latency=8.0ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.130 [CRITICAL] [postgres-db] [trace=d4c25786c9bf span=422437df] status=503 latency=3932.4ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.130 [ERROR   ] [payment-service] [trace=d4c25786c9bf span=232b91c4] status=500 latency=4580.6ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.130 [ERROR   ] [order-service] [trace=d4c25786c9bf span=d015c666] status=504 latency=4651.9ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.130 [WARN    ] [api-gateway] [trace=d4c25786c9bf span=1dc623aa] status=504 latency=4666.9ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.130 [INFO    ] [auth-service] [trace=f863ae89a360 span=d8fa62bf] status=200 latency=13.1ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.130 [CRITICAL] [postgres-db] [trace=f863ae89a360 span=3ea3394e] status=503 latency=4707.0ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.130 [ERROR   ] [payment-service] [trace=f863ae89a360 span=25491395] status=500 latency=4239.9ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.130 [ERROR   ] [order-service] [trace=f863ae89a360 span=38fa1b08] status=504 latency=4310.4ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.130 [WARN    ] [api-gateway] [trace=f863ae89a360 span=17422e5c] status=504 latency=4325.4ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.130 [INFO    ] [auth-service] [trace=da13db7a00da span=add5a094] status=200 latency=21.2ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.130 [CRITICAL] [postgres-db] [trace=da13db7a00da span=88c5a697] status=503 latency=3903.9ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.130 [ERROR   ] [payment-service] [trace=da13db7a00da span=01b585db] status=500 latency=4201.1ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.130 [ERROR   ] [order-service] [trace=da13db7a00da span=c9075889] status=504 latency=4287.0ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.130 [WARN    ] [api-gateway] [trace=da13db7a00da span=7c26eda4] status=504 latency=4302.0ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.141 [INFO    ] [auth-service] [trace=6b9947ca0606 span=b55556a5] status=200 latency=18.2ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.141 [CRITICAL] [postgres-db] [trace=6b9947ca0606 span=93251db3] status=503 latency=4950.3ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.141 [ERROR   ] [payment-service] [trace=6b9947ca0606 span=17be117b] status=500 latency=4441.4ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.141 [ERROR   ] [order-service] [trace=6b9947ca0606 span=097629d2] status=504 latency=4502.7ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.141 [WARN    ] [api-gateway] [trace=6b9947ca0606 span=838b3e29] status=504 latency=4517.7ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.141 [INFO    ] [auth-service] [trace=86949241977e span=e42f7aa3] status=200 latency=10.8ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.141 [CRITICAL] [postgres-db] [trace=86949241977e span=29546c8e] status=503 latency=4899.3ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.141 [ERROR   ] [payment-service] [trace=86949241977e span=34885e58] status=500 latency=4681.0ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.141 [ERROR   ] [order-service] [trace=86949241977e span=000115bb] status=504 latency=4752.5ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.141 [WARN    ] [api-gateway] [trace=86949241977e span=00b1be4e] status=504 latency=4767.5ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.141 [INFO    ] [auth-service] [trace=6823ae4cbc8a span=2f6488bb] status=200 latency=18.8ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.141 [CRITICAL] [postgres-db] [trace=6823ae4cbc8a span=8a9676dc] status=503 latency=4668.2ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.141 [ERROR   ] [payment-service] [trace=6823ae4cbc8a span=7d0ce3ae] status=500 latency=4615.0ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.141 [ERROR   ] [order-service] [trace=6823ae4cbc8a span=5a996369] status=504 latency=4688.6ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.141 [WARN    ] [api-gateway] [trace=6823ae4cbc8a span=a10c1308] status=504 latency=4703.6ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.141 [INFO    ] [auth-service] [trace=402a7cf58af2 span=74f9cbd6] status=200 latency=22.0ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.141 [CRITICAL] [postgres-db] [trace=402a7cf58af2 span=f6a7b457] status=503 latency=4617.2ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.141 [ERROR   ] [payment-service] [trace=402a7cf58af2 span=6677d3a6] status=500 latency=4840.8ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.141 [ERROR   ] [order-service] [trace=402a7cf58af2 span=d5bb646e] status=504 latency=4926.4ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.141 [WARN    ] [api-gateway] [trace=402a7cf58af2 span=89ad8f79] status=504 latency=4941.4ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.141 [INFO    ] [auth-service] [trace=f663f01e9ab9 span=9a298dc3] status=200 latency=13.8ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.141 [CRITICAL] [postgres-db] [trace=f663f01e9ab9 span=04143683] status=503 latency=3972.4ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.141 [ERROR   ] [payment-service] [trace=f663f01e9ab9 span=d0d48668] status=500 latency=4884.6ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.141 [ERROR   ] [order-service] [trace=f663f01e9ab9 span=49794994] status=504 latency=4926.2ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.141 [WARN    ] [api-gateway] [trace=f663f01e9ab9 span=3b2ba91e] status=504 latency=4941.2ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.141 [INFO    ] [auth-service] [trace=118fd0cfd83d span=ca041b61] status=200 latency=19.6ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.141 [CRITICAL] [postgres-db] [trace=118fd0cfd83d span=79c2de3a] status=503 latency=3859.4ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.141 [ERROR   ] [payment-service] [trace=118fd0cfd83d span=b4d16696] status=500 latency=4200.9ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.141 [ERROR   ] [order-service] [trace=118fd0cfd83d span=5356de27] status=504 latency=4287.9ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.141 [WARN    ] [api-gateway] [trace=118fd0cfd83d span=c4f95819] status=504 latency=4302.9ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.152 [INFO    ] [auth-service] [trace=2b9df2a60f97 span=e8f38cf9] status=200 latency=8.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.152 [CRITICAL] [postgres-db] [trace=2b9df2a60f97 span=c1c7faf3] status=503 latency=3809.6ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.152 [ERROR   ] [payment-service] [trace=2b9df2a60f97 span=a78d53af] status=500 latency=4884.9ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.152 [ERROR   ] [order-service] [trace=2b9df2a60f97 span=22ba204b] status=504 latency=4957.0ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.152 [WARN    ] [api-gateway] [trace=2b9df2a60f97 span=9017be01] status=504 latency=4972.0ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.152 [INFO    ] [auth-service] [trace=3f3cf0b90d30 span=0568557c] status=200 latency=20.5ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.152 [CRITICAL] [postgres-db] [trace=3f3cf0b90d30 span=85676a69] status=503 latency=4303.7ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.152 [ERROR   ] [payment-service] [trace=3f3cf0b90d30 span=480c4f12] status=500 latency=4724.6ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.152 [ERROR   ] [order-service] [trace=3f3cf0b90d30 span=839f1ebb] status=504 latency=4774.1ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.152 [WARN    ] [api-gateway] [trace=3f3cf0b90d30 span=ca552d69] status=504 latency=4789.1ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.152 [INFO    ] [auth-service] [trace=cbdb4988434d span=43d8db3e] status=200 latency=10.3ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.152 [CRITICAL] [postgres-db] [trace=cbdb4988434d span=c0c3f1fb] status=503 latency=3825.8ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.152 [ERROR   ] [payment-service] [trace=cbdb4988434d span=726b7fb2] status=500 latency=4357.9ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.152 [ERROR   ] [order-service] [trace=cbdb4988434d span=6a362e65] status=504 latency=4424.4ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.152 [WARN    ] [api-gateway] [trace=cbdb4988434d span=0b085706] status=504 latency=4439.4ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.152 [INFO    ] [auth-service] [trace=caf04e1d913b span=68fefc72] status=200 latency=13.8ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.152 [CRITICAL] [postgres-db] [trace=caf04e1d913b span=f3149723] status=503 latency=3627.8ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.152 [ERROR   ] [payment-service] [trace=caf04e1d913b span=456cbab8] status=500 latency=4306.5ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.152 [ERROR   ] [order-service] [trace=caf04e1d913b span=b4bf551e] status=504 latency=4393.1ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.152 [WARN    ] [api-gateway] [trace=caf04e1d913b span=e47ac019] status=504 latency=4408.1ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.163 [INFO    ] [auth-service] [trace=244a548311ee span=9ff9aa08] status=200 latency=19.3ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.163 [CRITICAL] [postgres-db] [trace=244a548311ee span=dc30d11c] status=503 latency=4163.7ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.163 [ERROR   ] [payment-service] [trace=244a548311ee span=9b267361] status=500 latency=4517.5ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.163 [ERROR   ] [order-service] [trace=244a548311ee span=2c456d65] status=504 latency=4570.8ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.163 [WARN    ] [api-gateway] [trace=244a548311ee span=0b7dbee3] status=504 latency=4585.8ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.163 [INFO    ] [auth-service] [trace=06a79e600f64 span=45777ecc] status=200 latency=15.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.163 [CRITICAL] [postgres-db] [trace=06a79e600f64 span=96099ebc] status=503 latency=3752.0ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.163 [ERROR   ] [payment-service] [trace=06a79e600f64 span=37c3e295] status=500 latency=4235.3ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.163 [ERROR   ] [order-service] [trace=06a79e600f64 span=0608b346] status=504 latency=4303.3ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.163 [WARN    ] [api-gateway] [trace=06a79e600f64 span=f13e14c2] status=504 latency=4318.3ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.163 [INFO    ] [auth-service] [trace=ae65e5c66482 span=bfce4ebb] status=200 latency=17.3ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.163 [CRITICAL] [postgres-db] [trace=ae65e5c66482 span=e86a1571] status=503 latency=3813.8ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.163 [ERROR   ] [payment-service] [trace=ae65e5c66482 span=81680152] status=500 latency=4720.9ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.163 [ERROR   ] [order-service] [trace=ae65e5c66482 span=9cd088d1] status=504 latency=4800.8ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.163 [WARN    ] [api-gateway] [trace=ae65e5c66482 span=664dc6b9] status=504 latency=4815.8ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.163 [INFO    ] [auth-service] [trace=16f6ea8e0165 span=9bcdb90e] status=200 latency=21.7ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.163 [CRITICAL] [postgres-db] [trace=16f6ea8e0165 span=049103c7] status=503 latency=4921.9ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.163 [ERROR   ] [payment-service] [trace=16f6ea8e0165 span=491cd99e] status=500 latency=4209.6ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.163 [ERROR   ] [order-service] [trace=16f6ea8e0165 span=da0bb218] status=504 latency=4258.1ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.163 [WARN    ] [api-gateway] [trace=16f6ea8e0165 span=2e455af1] status=504 latency=4273.1ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.163 [INFO    ] [auth-service] [trace=fcbeda28faa2 span=0d703a8d] status=200 latency=16.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.163 [CRITICAL] [postgres-db] [trace=fcbeda28faa2 span=38110d53] status=503 latency=5122.1ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.163 [ERROR   ] [payment-service] [trace=fcbeda28faa2 span=ce286591] status=500 latency=4878.2ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.163 [ERROR   ] [order-service] [trace=fcbeda28faa2 span=5f7c7ae6] status=504 latency=4921.6ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.163 [WARN    ] [api-gateway] [trace=fcbeda28faa2 span=724e6107] status=504 latency=4936.6ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.163 [INFO    ] [auth-service] [trace=11729a3d55ad span=e2b75eb3] status=200 latency=15.7ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.163 [CRITICAL] [postgres-db] [trace=11729a3d55ad span=b1c08e18] status=503 latency=5166.6ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.163 [ERROR   ] [payment-service] [trace=11729a3d55ad span=03aa8a2d] status=500 latency=4884.1ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.163 [ERROR   ] [order-service] [trace=11729a3d55ad span=846a558b] status=504 latency=4972.6ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.163 [WARN    ] [api-gateway] [trace=11729a3d55ad span=5dd77065] status=504 latency=4987.6ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.173 [INFO    ] [auth-service] [trace=7264ce6c59de span=6d4363e2] status=200 latency=18.7ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.173 [CRITICAL] [postgres-db] [trace=7264ce6c59de span=6873f390] status=503 latency=3512.8ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.173 [ERROR   ] [payment-service] [trace=7264ce6c59de span=068e9f61] status=500 latency=4365.1ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.173 [ERROR   ] [order-service] [trace=7264ce6c59de span=22b1b619] status=504 latency=4428.3ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.173 [WARN    ] [api-gateway] [trace=7264ce6c59de span=2a546439] status=504 latency=4443.3ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.173 [INFO    ] [auth-service] [trace=39842dee54a2 span=5fefd95a] status=200 latency=18.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.173 [CRITICAL] [postgres-db] [trace=39842dee54a2 span=6ad158cf] status=503 latency=3888.3ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.173 [ERROR   ] [payment-service] [trace=39842dee54a2 span=9602c34e] status=500 latency=4305.5ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.173 [ERROR   ] [order-service] [trace=39842dee54a2 span=ba929f64] status=504 latency=4363.1ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.173 [WARN    ] [api-gateway] [trace=39842dee54a2 span=dd1731b3] status=504 latency=4378.1ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.173 [INFO    ] [auth-service] [trace=6237abeb7b3c span=1736b144] status=200 latency=19.1ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.173 [CRITICAL] [postgres-db] [trace=6237abeb7b3c span=fcac479b] status=503 latency=3919.6ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.173 [ERROR   ] [payment-service] [trace=6237abeb7b3c span=a90e90f5] status=500 latency=4505.9ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.173 [ERROR   ] [order-service] [trace=6237abeb7b3c span=95f50d8d] status=504 latency=4564.9ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.173 [WARN    ] [api-gateway] [trace=6237abeb7b3c span=2b74b4a5] status=504 latency=4579.9ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.173 [INFO    ] [auth-service] [trace=6811d86175a7 span=4350fb86] status=200 latency=10.8ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.173 [CRITICAL] [postgres-db] [trace=6811d86175a7 span=fa337044] status=503 latency=5041.5ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.173 [ERROR   ] [payment-service] [trace=6811d86175a7 span=809b7e3e] status=500 latency=4334.6ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.173 [ERROR   ] [order-service] [trace=6811d86175a7 span=20af9e47] status=504 latency=4383.1ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.173 [WARN    ] [api-gateway] [trace=6811d86175a7 span=5535a666] status=504 latency=4398.1ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.173 [INFO    ] [auth-service] [trace=7f3dc3a6a441 span=3ed79e1b] status=200 latency=10.6ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.173 [CRITICAL] [postgres-db] [trace=7f3dc3a6a441 span=81b7f701] status=503 latency=5081.2ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.173 [ERROR   ] [payment-service] [trace=7f3dc3a6a441 span=18172a1a] status=500 latency=4582.2ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.173 [ERROR   ] [order-service] [trace=7f3dc3a6a441 span=3cdb3193] status=504 latency=4633.4ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.173 [WARN    ] [api-gateway] [trace=7f3dc3a6a441 span=be6a3d41] status=504 latency=4648.4ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.173 [INFO    ] [auth-service] [trace=e38ee7a0b74b span=a265d637] status=200 latency=21.5ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.173 [CRITICAL] [postgres-db] [trace=e38ee7a0b74b span=315630b7] status=503 latency=4271.1ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.173 [ERROR   ] [payment-service] [trace=e38ee7a0b74b span=b4d03cab] status=500 latency=4827.0ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.173 [ERROR   ] [order-service] [trace=e38ee7a0b74b span=d7a105b5] status=504 latency=4872.8ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.173 [WARN    ] [api-gateway] [trace=e38ee7a0b74b span=19b0b066] status=504 latency=4887.8ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.173 [INFO    ] [auth-service] [trace=6dd7318807c5 span=ba613ea5] status=200 latency=13.6ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.173 [CRITICAL] [postgres-db] [trace=6dd7318807c5 span=c1dbfca5] status=503 latency=4800.0ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.173 [ERROR   ] [payment-service] [trace=6dd7318807c5 span=147c69fd] status=500 latency=4789.3ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.173 [ERROR   ] [order-service] [trace=6dd7318807c5 span=b813a860] status=504 latency=4865.1ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.173 [WARN    ] [api-gateway] [trace=6dd7318807c5 span=6410824b] status=504 latency=4880.1ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.184 [INFO    ] [auth-service] [trace=a391757581d0 span=c8bc0690] status=200 latency=19.3ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.184 [CRITICAL] [postgres-db] [trace=a391757581d0 span=4434128e] status=503 latency=4395.8ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.184 [ERROR   ] [payment-service] [trace=a391757581d0 span=c5ceb77a] status=500 latency=4457.8ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.184 [ERROR   ] [order-service] [trace=a391757581d0 span=0a5c0485] status=504 latency=4516.0ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.184 [WARN    ] [api-gateway] [trace=a391757581d0 span=097e1f49] status=504 latency=4531.0ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.184 [INFO    ] [auth-service] [trace=74efb9e2a984 span=05a600a8] status=200 latency=18.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.184 [CRITICAL] [postgres-db] [trace=74efb9e2a984 span=ed1634df] status=503 latency=3664.6ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.184 [ERROR   ] [payment-service] [trace=74efb9e2a984 span=73d9ce72] status=500 latency=4632.4ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.184 [ERROR   ] [order-service] [trace=74efb9e2a984 span=95bb1088] status=504 latency=4680.3ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.184 [WARN    ] [api-gateway] [trace=74efb9e2a984 span=dab07567] status=504 latency=4695.3ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.184 [INFO    ] [auth-service] [trace=78d5e37b8b7d span=509b2240] status=200 latency=14.0ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.184 [CRITICAL] [postgres-db] [trace=78d5e37b8b7d span=9c6364cd] status=503 latency=4984.3ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.184 [ERROR   ] [payment-service] [trace=78d5e37b8b7d span=54f97e77] status=500 latency=4234.4ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.184 [ERROR   ] [order-service] [trace=78d5e37b8b7d span=866a6fa5] status=504 latency=4289.4ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.184 [WARN    ] [api-gateway] [trace=78d5e37b8b7d span=9eb52b8b] status=504 latency=4304.4ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.184 [INFO    ] [auth-service] [trace=656a2177d3c7 span=94d00bae] status=200 latency=18.6ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.184 [CRITICAL] [postgres-db] [trace=656a2177d3c7 span=ce9029d3] status=503 latency=4791.4ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.184 [ERROR   ] [payment-service] [trace=656a2177d3c7 span=f59f6641] status=500 latency=4487.9ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.184 [ERROR   ] [order-service] [trace=656a2177d3c7 span=69f7d10e] status=504 latency=4546.0ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.184 [WARN    ] [api-gateway] [trace=656a2177d3c7 span=71b917e3] status=504 latency=4561.0ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.184 [INFO    ] [auth-service] [trace=bfd29886eb79 span=b2677e62] status=200 latency=17.7ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.184 [CRITICAL] [postgres-db] [trace=bfd29886eb79 span=8fd2a83a] status=503 latency=3738.9ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.184 [ERROR   ] [payment-service] [trace=bfd29886eb79 span=f807fe96] status=500 latency=4629.0ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.184 [ERROR   ] [order-service] [trace=bfd29886eb79 span=7c6315b8] status=504 latency=4713.5ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.184 [WARN    ] [api-gateway] [trace=bfd29886eb79 span=97df4344] status=504 latency=4728.5ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.184 [INFO    ] [auth-service] [trace=76a8a9536629 span=18d0f557] status=200 latency=15.2ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.184 [CRITICAL] [postgres-db] [trace=76a8a9536629 span=19922031] status=503 latency=3739.1ms - FATAL: remaining connection slots are reserved for non-replication superuser connections (active=100/100)
+2026-11-08 08:18:16.184 [ERROR   ] [payment-service] [trace=76a8a9536629 span=d9d6dbeb] status=500 latency=4206.1ms - ConnectionPoolTimeout: Timeout after 4000ms awaiting connection from pool [pool=payment-read-write, active=50/50]
+2026-11-08 08:18:16.184 [ERROR   ] [order-service] [trace=76a8a9536629 span=9d20176a] status=504 latency=4249.5ms - PaymentServiceClientException: Upstream payment-service timed out after 4800ms for order_id=ord_8829
+2026-11-08 08:18:16.184 [WARN    ] [api-gateway] [trace=76a8a9536629 span=3a553a2d] status=504 latency=4264.5ms - CircuitBreaker OPEN for order-service. Returning HTTP 504 Gateway Timeout to client
+2026-11-08 08:18:16.194 [INFO    ] [auth-service] [trace=c70b2817d891 span=c6334485] status=200 latency=8.2ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.194 [DEBUG   ] [postgres-db] [trace=c70b2817d891 span=c3625870] status=200 latency=16.6ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.194 [INFO    ] [payment-service] [trace=c70b2817d891 span=c4505aaf] status=200 latency=105.4ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.194 [INFO    ] [order-service] [trace=c70b2817d891 span=6e57c09a] status=200 latency=150.1ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.194 [INFO    ] [api-gateway] [trace=c70b2817d891 span=3828e2a3] status=200 latency=160.1ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.194 [INFO    ] [auth-service] [trace=e6a241a90aad span=269cf3fe] status=200 latency=13.1ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.194 [DEBUG   ] [postgres-db] [trace=e6a241a90aad span=59ba6b55] status=200 latency=25.9ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.194 [INFO    ] [payment-service] [trace=e6a241a90aad span=214fe054] status=200 latency=97.4ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.194 [INFO    ] [order-service] [trace=e6a241a90aad span=6b63042d] status=200 latency=122.6ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.194 [INFO    ] [api-gateway] [trace=e6a241a90aad span=01f5c5c1] status=200 latency=132.6ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.194 [INFO    ] [auth-service] [trace=77afce4b314c span=b5a78dc9] status=200 latency=15.8ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.194 [DEBUG   ] [postgres-db] [trace=77afce4b314c span=5161ddaf] status=200 latency=17.9ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.194 [INFO    ] [payment-service] [trace=77afce4b314c span=3f17dc89] status=200 latency=131.2ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.194 [INFO    ] [order-service] [trace=77afce4b314c span=7639f72f] status=200 latency=165.0ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.194 [INFO    ] [api-gateway] [trace=77afce4b314c span=1650f475] status=200 latency=175.0ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.194 [INFO    ] [auth-service] [trace=e3670486688a span=28744dce] status=200 latency=19.5ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.194 [DEBUG   ] [postgres-db] [trace=e3670486688a span=d141a2e5] status=200 latency=23.6ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.194 [INFO    ] [payment-service] [trace=e3670486688a span=e2154ddb] status=200 latency=115.3ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.194 [INFO    ] [order-service] [trace=e3670486688a span=185ec4fc] status=200 latency=142.1ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.194 [INFO    ] [api-gateway] [trace=e3670486688a span=7f9d5575] status=200 latency=152.1ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.205 [INFO    ] [auth-service] [trace=281f830eb5e6 span=908ae49b] status=200 latency=19.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.205 [DEBUG   ] [postgres-db] [trace=281f830eb5e6 span=987781be] status=200 latency=22.9ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.205 [INFO    ] [payment-service] [trace=281f830eb5e6 span=ba20904c] status=200 latency=91.5ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.205 [INFO    ] [order-service] [trace=281f830eb5e6 span=067ecca2] status=200 latency=116.7ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.205 [INFO    ] [api-gateway] [trace=281f830eb5e6 span=d985f1e7] status=200 latency=126.7ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.205 [INFO    ] [auth-service] [trace=2c7219e5000d span=bded905d] status=200 latency=15.3ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.205 [DEBUG   ] [postgres-db] [trace=2c7219e5000d span=487223ec] status=200 latency=20.9ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.205 [INFO    ] [payment-service] [trace=2c7219e5000d span=7a6bf3a4] status=200 latency=96.5ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.205 [INFO    ] [order-service] [trace=2c7219e5000d span=bc2855ac] status=200 latency=124.0ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.205 [INFO    ] [api-gateway] [trace=2c7219e5000d span=63f2fc49] status=200 latency=134.0ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.205 [INFO    ] [auth-service] [trace=b34782880336 span=1a3125d0] status=200 latency=9.5ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.205 [DEBUG   ] [postgres-db] [trace=b34782880336 span=80e7886c] status=200 latency=15.4ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.205 [INFO    ] [payment-service] [trace=b34782880336 span=81a913c6] status=200 latency=102.1ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.205 [INFO    ] [order-service] [trace=b34782880336 span=dd5dbdd0] status=200 latency=147.6ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.205 [INFO    ] [api-gateway] [trace=b34782880336 span=07cc2133] status=200 latency=157.6ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.205 [INFO    ] [auth-service] [trace=ce6964e53571 span=d1e486c9] status=200 latency=9.6ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.205 [DEBUG   ] [postgres-db] [trace=ce6964e53571 span=3cab2307] status=200 latency=32.2ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.205 [INFO    ] [payment-service] [trace=ce6964e53571 span=9f142c1a] status=200 latency=130.6ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.205 [INFO    ] [order-service] [trace=ce6964e53571 span=2c8a42eb] status=200 latency=165.5ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.205 [INFO    ] [api-gateway] [trace=ce6964e53571 span=e7ac08f6] status=200 latency=175.5ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.205 [INFO    ] [auth-service] [trace=b0ebbb013f9e span=3d6b3952] status=200 latency=9.0ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.205 [DEBUG   ] [postgres-db] [trace=b0ebbb013f9e span=cd07bd55] status=200 latency=20.0ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.205 [INFO    ] [payment-service] [trace=b0ebbb013f9e span=44c9ce9c] status=200 latency=109.2ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.205 [INFO    ] [order-service] [trace=b0ebbb013f9e span=bceb59dd] status=200 latency=142.7ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.205 [INFO    ] [api-gateway] [trace=b0ebbb013f9e span=ac5ca6c3] status=200 latency=152.7ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.205 [INFO    ] [auth-service] [trace=77e363e8c6c0 span=e0971ea1] status=200 latency=9.8ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.205 [DEBUG   ] [postgres-db] [trace=77e363e8c6c0 span=ef3029f6] status=200 latency=27.5ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.205 [INFO    ] [payment-service] [trace=77e363e8c6c0 span=defa2003] status=200 latency=95.5ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.205 [INFO    ] [order-service] [trace=77e363e8c6c0 span=69b957dc] status=200 latency=144.1ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.205 [INFO    ] [api-gateway] [trace=77e363e8c6c0 span=bef8f24e] status=200 latency=154.1ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.205 [INFO    ] [auth-service] [trace=321682b5cba6 span=537e34f1] status=200 latency=15.3ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.205 [DEBUG   ] [postgres-db] [trace=321682b5cba6 span=0795cd04] status=200 latency=26.3ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.205 [INFO    ] [payment-service] [trace=321682b5cba6 span=a185ebf5] status=200 latency=114.8ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.205 [INFO    ] [order-service] [trace=321682b5cba6 span=c78ef2c4] status=200 latency=159.7ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.205 [INFO    ] [api-gateway] [trace=321682b5cba6 span=007668b2] status=200 latency=169.7ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.216 [INFO    ] [auth-service] [trace=2f14aba7cd66 span=5c8f70e7] status=200 latency=12.6ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.216 [DEBUG   ] [postgres-db] [trace=2f14aba7cd66 span=af89a718] status=200 latency=22.2ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.216 [INFO    ] [payment-service] [trace=2f14aba7cd66 span=4ca2434a] status=200 latency=133.5ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.216 [INFO    ] [order-service] [trace=2f14aba7cd66 span=e4d63646] status=200 latency=171.3ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.216 [INFO    ] [api-gateway] [trace=2f14aba7cd66 span=443d85ee] status=200 latency=181.3ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.216 [INFO    ] [auth-service] [trace=56658ab1b1f2 span=9e787bf4] status=200 latency=16.1ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.216 [DEBUG   ] [postgres-db] [trace=56658ab1b1f2 span=9f479513] status=200 latency=33.9ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.216 [INFO    ] [payment-service] [trace=56658ab1b1f2 span=6004a9ed] status=200 latency=106.2ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.216 [INFO    ] [order-service] [trace=56658ab1b1f2 span=3c5ee842] status=200 latency=156.2ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.216 [INFO    ] [api-gateway] [trace=56658ab1b1f2 span=c9af43c9] status=200 latency=166.2ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.216 [INFO    ] [auth-service] [trace=66e370cd72c8 span=d2673367] status=200 latency=10.5ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.216 [DEBUG   ] [postgres-db] [trace=66e370cd72c8 span=1d506929] status=200 latency=16.6ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.216 [INFO    ] [payment-service] [trace=66e370cd72c8 span=8755ba6c] status=200 latency=95.7ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.216 [INFO    ] [order-service] [trace=66e370cd72c8 span=0af223a3] status=200 latency=135.1ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.216 [INFO    ] [api-gateway] [trace=66e370cd72c8 span=84808655] status=200 latency=145.1ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.216 [INFO    ] [auth-service] [trace=53e3cac24a92 span=57cc8c77] status=200 latency=17.8ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.216 [DEBUG   ] [postgres-db] [trace=53e3cac24a92 span=3a41500c] status=200 latency=28.3ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.216 [INFO    ] [payment-service] [trace=53e3cac24a92 span=7d65e613] status=200 latency=136.6ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.216 [INFO    ] [order-service] [trace=53e3cac24a92 span=3c2d3ed1] status=200 latency=162.4ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.216 [INFO    ] [api-gateway] [trace=53e3cac24a92 span=57f7d948] status=200 latency=172.4ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.216 [INFO    ] [auth-service] [trace=28da25163bdf span=76195e74] status=200 latency=17.2ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.216 [DEBUG   ] [postgres-db] [trace=28da25163bdf span=43ffd698] status=200 latency=30.2ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.216 [INFO    ] [payment-service] [trace=28da25163bdf span=52f56a3a] status=200 latency=108.6ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.216 [INFO    ] [order-service] [trace=28da25163bdf span=df2e645e] status=200 latency=142.9ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.216 [INFO    ] [api-gateway] [trace=28da25163bdf span=f7b97365] status=200 latency=152.9ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.216 [INFO    ] [auth-service] [trace=d28968f106b7 span=9799d7cc] status=200 latency=8.2ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.216 [DEBUG   ] [postgres-db] [trace=d28968f106b7 span=727ffeaf] status=200 latency=13.3ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.216 [INFO    ] [payment-service] [trace=d28968f106b7 span=9617b0ea] status=200 latency=137.1ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.216 [INFO    ] [order-service] [trace=d28968f106b7 span=313e684c] status=200 latency=164.7ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.216 [INFO    ] [api-gateway] [trace=d28968f106b7 span=bd8157b8] status=200 latency=174.7ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.216 [INFO    ] [auth-service] [trace=5b5014ff18b2 span=85c51ac3] status=200 latency=18.6ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.216 [DEBUG   ] [postgres-db] [trace=5b5014ff18b2 span=ae3976d4] status=200 latency=23.8ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.216 [INFO    ] [payment-service] [trace=5b5014ff18b2 span=2f7f375f] status=200 latency=90.7ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.216 [INFO    ] [order-service] [trace=5b5014ff18b2 span=2ead1f8b] status=200 latency=134.0ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.216 [INFO    ] [api-gateway] [trace=5b5014ff18b2 span=069f83dc] status=200 latency=144.0ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.234 [INFO    ] [auth-service] [trace=78e2a7530840 span=43dc571c] status=200 latency=10.4ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.234 [DEBUG   ] [postgres-db] [trace=78e2a7530840 span=288190b1] status=200 latency=24.4ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.234 [INFO    ] [payment-service] [trace=78e2a7530840 span=94f6c6e8] status=200 latency=91.3ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.234 [INFO    ] [order-service] [trace=78e2a7530840 span=00bd38e5] status=200 latency=131.6ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.234 [INFO    ] [api-gateway] [trace=78e2a7530840 span=de0cbf94] status=200 latency=141.6ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.234 [INFO    ] [auth-service] [trace=dd1d5dfb315d span=ea371419] status=200 latency=15.2ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.234 [DEBUG   ] [postgres-db] [trace=dd1d5dfb315d span=c4f98acd] status=200 latency=15.2ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.234 [INFO    ] [payment-service] [trace=dd1d5dfb315d span=f499904e] status=200 latency=127.6ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.234 [INFO    ] [order-service] [trace=dd1d5dfb315d span=7d630b4c] status=200 latency=164.2ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.234 [INFO    ] [api-gateway] [trace=dd1d5dfb315d span=8e9f1164] status=200 latency=174.2ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.234 [INFO    ] [auth-service] [trace=f04387021af4 span=3afe93ad] status=200 latency=8.9ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.234 [DEBUG   ] [postgres-db] [trace=f04387021af4 span=93322ae4] status=200 latency=25.3ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.234 [INFO    ] [payment-service] [trace=f04387021af4 span=547598aa] status=200 latency=100.2ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.234 [INFO    ] [order-service] [trace=f04387021af4 span=93cfae20] status=200 latency=131.4ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.234 [INFO    ] [api-gateway] [trace=f04387021af4 span=a13104b3] status=200 latency=141.4ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.234 [INFO    ] [auth-service] [trace=3b3782bb526b span=1b429637] status=200 latency=9.0ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.234 [DEBUG   ] [postgres-db] [trace=3b3782bb526b span=c834e52e] status=200 latency=22.2ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.234 [INFO    ] [payment-service] [trace=3b3782bb526b span=44d05c68] status=200 latency=100.6ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.234 [INFO    ] [order-service] [trace=3b3782bb526b span=d1f27ef0] status=200 latency=133.9ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.234 [INFO    ] [api-gateway] [trace=3b3782bb526b span=1f5d457d] status=200 latency=143.9ms - POST /api/v1/orders 200 OK
+2026-11-08 08:18:16.234 [INFO    ] [auth-service] [trace=b907f4225a39 span=caf976cd] status=200 latency=14.4ms - JWT validated successfully for client_id=usr_9281
+2026-11-08 08:18:16.234 [DEBUG   ] [postgres-db] [trace=b907f4225a39 span=d1c1299f] status=200 latency=31.3ms - Transaction committed: INSERT INTO payments (id, amount, status) VALUES ($1, $2, 'SUCCESS')
+2026-11-08 08:18:16.234 [INFO    ] [payment-service] [trace=b907f4225a39 span=f9c5d5ae] status=200 latency=115.9ms - Payment processed successfully for amount=$84.50
+2026-11-08 08:18:16.234 [INFO    ] [order-service] [trace=b907f4225a39 span=a87b2c4f] status=200 latency=145.4ms - Order ord_4102 confirmed and inventory reserved
+2026-11-08 08:18:16.234 [INFO    ] [api-gateway] [trace=b907f4225a39 span=3c02b092] status=200 latency=155.4ms - POST /api/v1/orders 200 OK

@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  tracemind-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tracemind-platform
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
