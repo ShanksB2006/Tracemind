@@ -234,41 +234,191 @@ class MemoryLeakScenario(BaseScenario):
             now_dt = base_time + timedelta(seconds=tick_second)
         now_str = now_dt.strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
         ratio = tick_second / max(1, total_seconds)
-        trace_id = uuid.uuid4().hex[:12]
 
-        if ratio > 0.65:
-            # Critical OOM failure
-            logs.append(LogEntry(
-                timestamp=now_str,
-                service="order-service",
-                level=LogLevel.CRITICAL,
-                message="java.lang.OutOfMemoryError: Java heap space. Dumping heap to java_pid1.hprof (Heap 98.9% full)",
-                trace_id=trace_id,
-                span_id=uuid.uuid4().hex[:8],
-                latency_ms=8500.0,
-                status_code=500
-            ))
-            logs.append(LogEntry(
-                timestamp=now_str,
-                service="api-gateway",
-                level=LogLevel.ERROR,
-                message="502 Bad Gateway: order-service connection refused (pod terminating)",
-                trace_id=trace_id,
-                span_id=uuid.uuid4().hex[:8],
-                latency_ms=1200.0,
-                status_code=502
-            ))
+        req_count = random.randint(2, 5)
+        for _ in range(req_count):
+            trace_id = uuid.uuid4().hex[:12]
+            if ratio > 0.55:
+                # Critical OOM failure and cascade
+                logs.append(LogEntry(
+                    timestamp=now_str,
+                    service="order-service",
+                    level=LogLevel.CRITICAL,
+                    message="java.lang.OutOfMemoryError: Java heap space. Dumping heap to java_pid1.hprof (Heap 99.2% full)",
+                    trace_id=trace_id,
+                    span_id=uuid.uuid4().hex[:8],
+                    latency_ms=random.uniform(6200.0, 9400.0),
+                    status_code=500
+                ))
+                logs.append(LogEntry(
+                    timestamp=now_str,
+                    service="inventory-service",
+                    level=LogLevel.WARN,
+                    message="Order service downstream unready during inventory allocation; retrying span",
+                    trace_id=trace_id,
+                    span_id=uuid.uuid4().hex[:8],
+                    latency_ms=random.uniform(1200.0, 2400.0),
+                    status_code=503
+                ))
+                logs.append(LogEntry(
+                    timestamp=now_str,
+                    service="api-gateway",
+                    level=LogLevel.ERROR,
+                    message="502 Bad Gateway: order-service connection refused during OOM pod termination",
+                    trace_id=trace_id,
+                    span_id=uuid.uuid4().hex[:8],
+                    latency_ms=random.uniform(1800.0, 3100.0),
+                    status_code=502
+                ))
+            elif ratio > 0.30:
+                # Degrading memory consumption
+                logs.append(LogEntry(
+                    timestamp=now_str,
+                    service="order-service",
+                    level=LogLevel.WARN,
+                    message=f"Order cache size growing unbounded: {int(65000 * (1 + ratio * 3))} items. Heap at {int(55 + ratio * 40)}%",
+                    trace_id=trace_id,
+                    span_id=uuid.uuid4().hex[:8],
+                    latency_ms=random.uniform(350.0, 1100.0),
+                    status_code=200
+                ))
+                logs.append(LogEntry(
+                    timestamp=now_str,
+                    service="api-gateway",
+                    level=LogLevel.INFO,
+                    message="Order response returned with degraded latency",
+                    trace_id=trace_id,
+                    span_id=uuid.uuid4().hex[:8],
+                    latency_ms=random.uniform(360.0, 1150.0),
+                    status_code=200
+                ))
+            else:
+                # Nominal early phase
+                logs.append(LogEntry(
+                    timestamp=now_str,
+                    service="order-service",
+                    level=LogLevel.INFO,
+                    message="Order processed successfully; item reservation verified",
+                    trace_id=trace_id,
+                    span_id=uuid.uuid4().hex[:8],
+                    latency_ms=random.uniform(45.0, 95.0),
+                    status_code=200
+                ))
+                logs.append(LogEntry(
+                    timestamp=now_str,
+                    service="api-gateway",
+                    level=LogLevel.INFO,
+                    message="POST /api/v1/orders 200 OK",
+                    trace_id=trace_id,
+                    span_id=uuid.uuid4().hex[:8],
+                    latency_ms=random.uniform(55.0, 110.0),
+                    status_code=200
+                ))
+
+        return logs
+
+
+class NetworkTimeoutScenario(BaseScenario):
+    """Scenario: Redis Cache Network Partition & Auth Latency Spike."""
+    def generate_tick(self, tick_second: int, total_seconds: int, base_time: Optional[datetime] = None) -> List[LogEntry]:
+        logs: List[LogEntry] = []
+        if base_time is None:
+            now_dt = datetime.now(timezone.utc)
         else:
-            # Nominal with creeping memory
+            now_dt = base_time + timedelta(seconds=tick_second)
+        now_str = now_dt.strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
+        ratio = tick_second / max(1, total_seconds)
+
+        req_count = random.randint(3, 6)
+        for _ in range(req_count):
+            trace_id = uuid.uuid4().hex[:12]
+            if ratio > 0.45:
+                # Critical timeout and network disconnect
+                logs.append(LogEntry(
+                    timestamp=now_str,
+                    service="redis-cache",
+                    level=LogLevel.CRITICAL,
+                    message="ConnectionTimeoutException: Socket read timed out after 5000ms connecting to redis-cluster-node-0",
+                    trace_id=trace_id,
+                    span_id=uuid.uuid4().hex[:8],
+                    latency_ms=random.uniform(5000.0, 6500.0),
+                    status_code=504
+                ))
+                logs.append(LogEntry(
+                    timestamp=now_str,
+                    service="auth-service",
+                    level=LogLevel.ERROR,
+                    message="Failed session validation: Redis session cache unavailable; falling back to DB with severe latency",
+                    trace_id=trace_id,
+                    span_id=uuid.uuid4().hex[:8],
+                    latency_ms=random.uniform(3200.0, 5100.0),
+                    status_code=503
+                ))
+                logs.append(LogEntry(
+                    timestamp=now_str,
+                    service="api-gateway",
+                    level=LogLevel.ERROR,
+                    message="504 Gateway Timeout: auth-service failed token verification within 5000ms SLA",
+                    trace_id=trace_id,
+                    span_id=uuid.uuid4().hex[:8],
+                    latency_ms=random.uniform(5005.0, 5200.0),
+                    status_code=504
+                ))
+            else:
+                logs.append(LogEntry(
+                    timestamp=now_str,
+                    service="redis-cache",
+                    level=LogLevel.DEBUG,
+                    message="GET session_token: hit (0.8ms)",
+                    trace_id=trace_id,
+                    span_id=uuid.uuid4().hex[:8],
+                    latency_ms=random.uniform(0.5, 3.0),
+                    status_code=200
+                ))
+                logs.append(LogEntry(
+                    timestamp=now_str,
+                    service="auth-service",
+                    level=LogLevel.INFO,
+                    message="Session token authenticated successfully for user_982",
+                    trace_id=trace_id,
+                    span_id=uuid.uuid4().hex[:8],
+                    latency_ms=random.uniform(15.0, 35.0),
+                    status_code=200
+                ))
+                logs.append(LogEntry(
+                    timestamp=now_str,
+                    service="api-gateway",
+                    level=LogLevel.INFO,
+                    message="GET /api/v1/auth/verify 200 OK",
+                    trace_id=trace_id,
+                    span_id=uuid.uuid4().hex[:8],
+                    latency_ms=random.uniform(20.0, 45.0),
+                    status_code=200
+                ))
+        return logs
+
+
+class NominalTrafficScenario(BaseScenario):
+    """Scenario: Nominal Baseline Traffic (100% Healthy Mesh)."""
+    def generate_tick(self, tick_second: int, total_seconds: int, base_time: Optional[datetime] = None) -> List[LogEntry]:
+        logs: List[LogEntry] = []
+        if base_time is None:
+            now_dt = datetime.now(timezone.utc)
+        else:
+            now_dt = base_time + timedelta(seconds=tick_second)
+        now_str = now_dt.strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
+
+        services = ["api-gateway", "auth-service", "order-service", "inventory-service", "payment-service", "postgres-db", "redis-cache"]
+        for svc in services:
+            trace_id = uuid.uuid4().hex[:12]
             logs.append(LogEntry(
                 timestamp=now_str,
-                service="order-service",
-                level=LogLevel.INFO if ratio < 0.4 else LogLevel.WARN,
-                message=f"Order cache size growing: {int(50000 * (1 + ratio * 4))} items. Heap usage at {int(40 + ratio * 55)}%",
+                service=svc,
+                level=LogLevel.INFO,
+                message=f"Health check ok for {svc}; request completed with nominal latency",
                 trace_id=trace_id,
                 span_id=uuid.uuid4().hex[:8],
-                latency_ms=random.uniform(50.0, 180.0),
+                latency_ms=random.uniform(15.0, 85.0),
                 status_code=200
             ))
-
         return logs

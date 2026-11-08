@@ -43,5 +43,43 @@ def run_tests():
         assert frontend.status_code == 200
         print("[✓] Dashboard UI: Served 200 OK successfully")
 
+        # 6. SEO Endpoints
+        robots = client.get("/robots.txt")
+        assert robots.status_code == 200
+        assert "Sitemap:" in robots.text
+        print("[✓] SEO: /robots.txt verified")
+
+        sitemap = client.get("/sitemap.xml")
+        assert sitemap.status_code == 200
+        assert "<urlset" in sitemap.text
+        print("[✓] SEO: /sitemap.xml verified")
+
+        manifest = client.get("/manifest.json")
+        assert manifest.status_code == 200
+        assert manifest.json()["name"] == "TraceMind AIOps Platform"
+        print("[✓] SEO / PWA: /manifest.json verified")
+
+        # 7. Scenarios & Live Telemetry
+        scenarios = client.get("/api/v1/scenarios").json()
+        assert len(scenarios) >= 4
+        print(f"[✓] Scenarios: {len(scenarios)} available chaos scenarios")
+
+        telemetry = client.get("/api/v1/telemetry/live").json()
+        assert "nodes" in telemetry
+        assert len(telemetry["nodes"]) == 8
+        print(f"[✓] Live Telemetry: 8 microservice nodes tracked")
+
+        # 8. Post-Mortem Export
+        pm = client.get("/api/v1/export/postmortem?format=markdown")
+        assert pm.status_code == 200
+        assert "TraceMind Incident Post-Mortem" in pm.text
+        print("[✓] SRE Post-Mortem: Markdown export verified")
+
+        # 9. Remediation Execution
+        rem = client.post("/api/v1/remediation/execute", json={"action_type": "auto_execute"}).json()
+        assert rem["status"] == "success"
+        assert len(rem["execution_terminal_logs"]) > 0
+        print(f"[✓] Automated Remediation: {rem['action_taken']}")
+
 if __name__ == "__main__":
     run_tests()

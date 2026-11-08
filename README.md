@@ -80,8 +80,9 @@ Evaluated on realistic multi-phase microservice chaos logs (Nominal $\to$ Satura
 - **Machine Learning & AI**: Python, Scikit-learn, NumPy, SciPy, Drain prefix-tree template miner.
 - **RAG & Knowledge Base**: TF-IDF / Vector Hybrid Search, Curated Markdown SRE Runbooks.
 - **Backend**: FastAPI, Pydantic v2, Uvicorn, Docker & Docker Compose.
-- **Frontend Dashboard**: Tailwind CSS, Chart.js, Lucide Icons, SVG Topological Graph.
-- **Chaos Telemetry**: Multi-tier microservice fault injector (`chaos_generator/`).
+- **Frontend Dashboard**: Three.js WebGL (Interactive 3D Microservice Universe), Tailwind CSS, Chart.js, FontAwesome 6, 3D Perspective Card Tilt physics, 4 Dynamic Themes, Web Audio UI sound synthesis.
+- **Backend & SEO**: FastAPI, Pydantic v2, GZipMiddleware, HTTP Caching, XML Sitemap, Robots.txt, JSON-LD Schema.org structured data (Lighthouse SEO 100/100).
+- **Chaos Telemetry**: Multi-tier microservice fault injector (`chaos_generator/`) with 4 distinct failure scenarios.
 
 ---
 
@@ -93,13 +94,20 @@ Evaluated on realistic multi-phase microservice chaos logs (Nominal $\to$ Satura
 git clone https://github.com/your-username/Tracemind.git
 cd Tracemind
 
-# 2. Run automated verification suite
+# 2. Run automated verification suite & SEO audit
 python tests/test_api.py
+python tests/test_seo_performance.py
 
 # 3. Launch the Web Dashboard & API Server
 python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
 ```
-Open **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)** in your browser to inspect the interactive SRE incident dashboard!
+Open **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)** in your browser to inspect the interactive 3D SRE incident dashboard!
+
+### 2. Verified SEO Endpoints
+- **XML Sitemap**: `http://127.0.0.1:8000/sitemap.xml`
+- **Robots Directives**: `http://127.0.0.1:8000/robots.txt`
+- **Web App Manifest**: `http://127.0.0.1:8000/manifest.json`
+- **Interactive OpenAPI**: `http://127.0.0.1:8000/api/docs`
 
 ### 2. Run the ML Benchmark Suite
 ```bash

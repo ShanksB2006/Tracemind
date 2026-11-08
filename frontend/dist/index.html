@@ -1,332 +1,1285 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cyberpunk" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TraceMind — AI-Powered Incident Detection & Root Cause Analysis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>TraceMind — AI-Powered Incident Detection & Causal RCA Platform | Next-Gen Observability</title>
+  <meta name="title" content="TraceMind — AI-Powered Incident Detection & Causal RCA Platform | Next-Gen Observability">
+  <meta name="description" content="TraceMind is an enterprise AIOps platform featuring sub-millisecond ML anomaly detection, causal DAG topology tracing, and multi-agent SRE incident remediation.">
+  <meta name="keywords" content="AIOps, incident detection, root cause analysis, RCA, microservices observability, causal DAG, PageRank, anomaly detection, SRE runbooks, bottleneck autoencoder, Drain miner, distributed tracing">
+  <meta name="author" content="TraceMind Systems">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://tracemind.ai/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tracemind.ai/">
+  <meta property="og:site_name" content="TraceMind AIOps">
+  <meta property="og:title" content="TraceMind — AI-Powered Incident Detection & Causal RCA Platform">
+  <meta property="og:description" content="Enterprise AIOps platform detecting anomalous microservice cascades, isolating root causes with 94%+ confidence via causal DAGs, and generating automated SRE remediation.">
+  <meta property="og:image" content="https://tracemind.ai/static/og-banner.png">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://tracemind.ai/">
+  <meta name="twitter:title" content="TraceMind — Next-Gen AIOps & Causal Incident Detection">
+  <meta name="twitter:description" content="Sub-millisecond bottleneck autoencoder anomaly detection with PageRank causal graph root cause analysis and automated multi-agent SRE runbook execution.">
+  <meta name="twitter:image" content="https://tracemind.ai/static/og-banner.png">
+  <meta name="twitter:creator" content="@TraceMindAI">
+
+  <!-- PWA & Mobile Capabilities -->
+  <meta name="theme-color" content="#00f0ff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="TraceMind">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Favicon (Inline Vector SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300f0ff'/><stop offset='100%25' stop-color='%238b5cf6'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%230a0d18'/><path d='M30 25 L30 50 A20 20 0 0 0 70 50 L70 25 M50 25 L50 78 M40 78 L60 78' stroke='url(%23g)' stroke-width='9' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='50' cy='25' r='5' fill='%2300f0ff'/></svg>">
+
+  <!-- Structured Data: JSON-LD for Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "TraceMind AIOps Platform",
+        "headline": "AI-Powered Microservice Incident Detection and Causal Root Cause Analysis",
+        "applicationCategory": "DevOpsApplication",
+        "operatingSystem": "All",
+        "description": "High-throughput observability platform utilizing Bottleneck Autoencoders, Drain algorithmic prefix-tree clustering, and Personalized PageRank on service DAGs for instant incident remediation.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "ratingCount": "128",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Organization",
+        "name": "TraceMind Systems",
+        "url": "https://tracemind.ai",
+        "logo": "https://tracemind.ai/static/logo.svg",
+        "sameAs": [
+          "https://github.com/your-username/Tracemind"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does TraceMind isolate root causes in microservices?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TraceMind traverses microservice dependency DAGs using Random Walk with Restart (Personalized PageRank) and temporal log clustering, isolating upstream failure origins with 94%+ confidence."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What machine learning models power TraceMind's anomaly detection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TraceMind benchmarks Spatial Tree Isolation Forests against Bottleneck Autoencoders with non-linear MSE reconstruction, achieving zero-step detection lag and 0.001ms vectorized inference latency."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the Multi-Agent SRE Investigator operate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Three autonomous agent personas collaborate: Log Pattern Analyst (Drain miner wildcards), Topology Tracer (blast radius propagation), and Remediation Advisor (RAG hybrid search over SRE runbooks)."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- External CDNs -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Tailwind Configuration for Themes & Fluidity -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: 'var(--accent-cyan)',
+              purple: 'var(--accent-purple)',
+              emerald: 'var(--accent-emerald)',
+              danger: 'var(--accent-danger)',
+              amber: 'var(--accent-amber)',
+            }
+          },
+          animation: {
+            'glow-pulse': 'glowPulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'radar-spin': 'radarSpin 10s linear infinite',
+            'float': 'float 4s ease-in-out infinite',
+            'shimmer': 'shimmer 2.5s infinite linear',
+          },
+          keyframes: {
+            glowPulse: {
+              '0%, 100%': { opacity: 1, filter: 'drop-shadow(0 0 14px var(--accent-danger))' },
+              '50%': { opacity: 0.65, filter: 'drop-shadow(0 0 4px var(--accent-danger))' },
+            },
+            radarSpin: {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Theme CSS Variables & Custom Motion System -->
   <style>
-    body { background-color: #0b0f17; color: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    .glass-card { background: rgba(18, 24, 38, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; }
-    .pulse-danger { animation: pulseGlow 2s infinite; }
-    @keyframes pulseGlow { 0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6); } 70% { box-shadow: 0 0 0 14px rgba(239, 68, 68, 0); } 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
+    /* Default: Cyberpunk Obsidian */
+    :root, [data-theme="cyberpunk"] {
+      --bg-base: #06080e;
+      --bg-surface: #0c101b;
+      --bg-card: rgba(15, 21, 37, 0.78);
+      --bg-card-hover: rgba(22, 30, 53, 0.88);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(0, 240, 255, 0.25);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-faint: #64748b;
+      --accent-cyan: #00f0ff;
+      --accent-purple: #8b5cf6;
+      --accent-emerald: #10b981;
+      --accent-danger: #ff3366;
+      --accent-amber: #f59e0b;
+      --glow-rgb: 0, 240, 255;
+      --danger-rgb: 255, 51, 102;
+    }
+
+    /* Theme 2: Matrix Phosphor */
+    [data-theme="matrix"] {
+      --bg-base: #030805;
+      --bg-surface: #07130b;
+      --bg-card: rgba(8, 24, 14, 0.82);
+      --bg-card-hover: rgba(14, 38, 22, 0.92);
+      --border-subtle: rgba(16, 185, 129, 0.16);
+      --border-glow: rgba(0, 255, 157, 0.35);
+      --text-main: #e6fffa;
+      --text-muted: #86efac;
+      --text-faint: #34d399;
+      --accent-cyan: #00ff9d;
+      --accent-purple: #10b981;
+      --accent-emerald: #059669;
+      --accent-danger: #ef4444;
+      --accent-amber: #facc15;
+      --glow-rgb: 0, 255, 157;
+      --danger-rgb: 239, 68, 68;
+    }
+
+    /* Theme 3: Quantum Slate (Clean High-End Enterprise) */
+    [data-theme="slate"] {
+      --bg-base: #0a0f1d;
+      --bg-surface: #10182c;
+      --bg-card: rgba(20, 31, 55, 0.78);
+      --bg-card-hover: rgba(28, 44, 76, 0.88);
+      --border-subtle: rgba(255, 255, 255, 0.1);
+      --border-glow: rgba(99, 102, 241, 0.3);
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-faint: #64748b;
+      --accent-cyan: #38bdf8;
+      --accent-purple: #6366f1;
+      --accent-emerald: #10b981;
+      --accent-danger: #f43f5e;
+      --accent-amber: #f59e0b;
+      --glow-rgb: 99, 102, 241;
+      --danger-rgb: 244, 63, 94;
+    }
+
+    /* Theme 4: Solar Flare Amber */
+    [data-theme="solar"] {
+      --bg-base: #0e0906;
+      --bg-surface: #17100b;
+      --bg-card: rgba(28, 19, 13, 0.8);
+      --bg-card-hover: rgba(42, 28, 19, 0.9);
+      --border-subtle: rgba(245, 158, 11, 0.15);
+      --border-glow: rgba(249, 115, 22, 0.35);
+      --text-main: #fffbeb;
+      --text-muted: #fde68a;
+      --text-faint: #b45309;
+      --accent-cyan: #38bdf8;
+      --accent-purple: #f97316;
+      --accent-emerald: #10b981;
+      --accent-danger: #ef4444;
+      --accent-amber: #f59e0b;
+      --glow-rgb: 245, 158, 11;
+      --danger-rgb: 239, 68, 68;
+    }
+
+    /* Base Styling & Dynamic Transitions */
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      transition: background-color 0.4s ease, color 0.4s ease;
+      overflow-x: hidden;
+    }
+
+    /* Glassmorphism Card System */
+    .glass-panel {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .glass-panel:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-glow);
+    }
+
+    /* 3D Perspective Tilt Card System */
+    .card-3d {
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      transition: transform 0.18s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease;
+      will-change: transform;
+    }
+
+    .card-glare {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      mix-blend-mode: overlay;
+      z-index: 10;
+    }
+
+    /* Shimmering Text Gradient */
+    .text-gradient-cyan {
+      background: linear-gradient(135deg, var(--accent-cyan) 0%, #a855f7 50%, var(--accent-purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-danger {
+      background: linear-gradient(135deg, #ff4d4d 0%, var(--accent-danger) 60%, #ff8080 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Rotating Gradient Border Highlight */
+    .glow-border-critical {
+      box-shadow: 0 0 20px -3px rgba(var(--danger-rgb), 0.35), inset 0 0 12px -5px rgba(var(--danger-rgb), 0.25);
+      border-color: rgba(var(--danger-rgb), 0.6) !important;
+    }
+
+    /* Terminal Code Highlighting */
+    .terminal-window {
+      background: #040710;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-base); }
+    ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.18); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent-cyan); }
   </style>
 </head>
-<body class="min-h-screen flex flex-col">
 
-  <!-- Top Navigation -->
-  <header class="border-b border-gray-800 bg-[#0f1422]/90 sticky top-0 z-50 px-6 py-3.5 flex items-center justify-between">
-    <div class="flex items-center gap-3">
-      <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center font-black text-white text-lg shadow-lg shadow-indigo-500/20">
-        Ψ
-      </div>
-      <div>
-        <h1 class="text-lg font-bold text-white tracking-tight flex items-center gap-2">
-          TraceMind <span class="text-xs px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-mono">AIOps v1.0</span>
-        </h1>
-        <p class="text-xs text-gray-400">Incident Detection & Causal Root Cause Analysis Platform</p>
-      </div>
-    </div>
+<body class="min-h-screen flex flex-col selection:bg-brand-cyan/25 selection:text-white">
 
-    <div class="flex items-center gap-4">
-      <div class="hidden md:flex items-center gap-2 text-xs text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-        Streaming Ingestion Active
+  <!-- Ambient Dynamic 3D Canvas Background -->
+  <div id="ambientCanvasContainer" class="fixed inset-0 pointer-events-none z-0 opacity-40"></div>
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-[var(--bg-surface)]/85 backdrop-blur-xl px-4 lg:px-8 py-3.5 transition-colors">
+    <div class="max-w-[1720px] mx-auto flex items-center justify-between gap-4">
+      
+      <!-- Brand & SEO Heading -->
+      <div class="flex items-center gap-3.5">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-600 to-purple-600 flex items-center justify-center font-black text-white text-xl shadow-lg shadow-cyan-500/25 ring-1 ring-white/25">
+          Ψ
+        </div>
+        <div>
+          <div class="flex items-center gap-2.5">
+            <h1 class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+              TraceMind
+              <span class="text-[10px] font-mono tracking-widest uppercase px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold">
+                AIOps 2.0
+              </span>
+            </h1>
+            <span class="hidden sm:inline-flex items-center gap-1.5 text-xs text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20 font-medium">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              Live Telemetry Stream
+            </span>
+          </div>
+          <p class="text-xs text-[var(--text-muted)] hidden md:block">
+            Sub-millisecond Microservice Anomaly Detection & Causal DAG Root Cause Analysis
+          </p>
+        </div>
       </div>
 
-      <button id="simBtn" onclick="runSimulation()" class="bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-medium text-xs px-4 py-2 rounded-lg flex items-center gap-2 shadow-lg shadow-red-600/20 transition-all">
-        <i class="fa-solid fa-bolt"></i> Simulate Failure
-      </button>
+      <!-- Quick Action Controls & Theme Switcher -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        
+        <!-- Audio FX Toggle -->
+        <button id="soundToggleBtn" onclick="toggleAudio()" aria-label="Toggle High-Tech Audio Synthesis" class="p-2.5 rounded-lg border border-white/10 hover:border-cyan-400/50 bg-white/5 text-[var(--text-muted)] hover:text-cyan-400 transition-all text-xs" title="Audio FX Toggle">
+          <i id="soundIcon" class="fa-solid fa-volume-high"></i>
+        </button>
+
+        <!-- Theme Switcher Pill -->
+        <div class="relative inline-block text-left">
+          <button id="themeDropdownBtn" onclick="toggleThemeMenu()" aria-label="Select Interface Theme" class="flex items-center gap-2 px-3 py-2 rounded-lg border border-white/10 bg-white/5 hover:border-cyan-400/50 text-xs text-[var(--text-main)] font-medium transition-all">
+            <span id="themeDot" class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+            <span id="themeLabel" class="hidden sm:inline">Cyberpunk</span>
+            <i class="fa-solid fa-palette text-[10px] opacity-70"></i>
+          </button>
+          
+          <div id="themeMenu" class="hidden absolute right-0 mt-2 w-48 rounded-xl bg-[var(--bg-surface)] border border-white/15 shadow-2xl p-1.5 z-50 text-xs backdrop-blur-2xl">
+            <button onclick="setTheme('cyberpunk')" aria-label="Select Cyberpunk Theme (Obsidian and Neon Cyan)" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-white/10 text-left transition-colors">
+              <span class="w-3 h-3 rounded-full bg-cyan-400 shadow-sm shadow-cyan-400"></span>
+              <div>
+                <div class="font-semibold text-white">Cyberpunk</div>
+                <div class="text-[10px] text-gray-400">Obsidian & Neon Cyan</div>
+              </div>
+            </button>
+            <button onclick="setTheme('matrix')" aria-label="Select Matrix Theme (Terminal Phosphor)" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-white/10 text-left transition-colors">
+              <span class="w-3 h-3 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400"></span>
+              <div>
+                <div class="font-semibold text-white">Matrix</div>
+                <div class="text-[10px] text-gray-400">Terminal Phosphor</div>
+              </div>
+            </button>
+            <button onclick="setTheme('slate')" aria-label="Select Quantum Slate Theme (Clean Enterprise SRE)" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-white/10 text-left transition-colors">
+              <span class="w-3 h-3 rounded-full bg-indigo-400 shadow-sm shadow-indigo-400"></span>
+              <div>
+                <div class="font-semibold text-white">Quantum Slate</div>
+                <div class="text-[10px] text-gray-400">Clean Enterprise SRE</div>
+              </div>
+            </button>
+            <button onclick="setTheme('solar')" aria-label="Select Solar Flare Theme (Warm Amber and Espresso)" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-white/10 text-left transition-colors">
+              <span class="w-3 h-3 rounded-full bg-amber-400 shadow-sm shadow-amber-400"></span>
+              <div>
+                <div class="font-semibold text-white">Solar Flare</div>
+                <div class="text-[10px] text-gray-400">Warm Amber & Espresso</div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Export Post-Mortem Button -->
+        <button onclick="exportPostmortem()" aria-label="Export SRE Incident Post-Mortem Report" class="hidden md:flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-white/10 hover:border-purple-400/50 bg-purple-500/10 text-purple-300 hover:text-white text-xs font-semibold transition-all">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>Post-Mortem</span>
+        </button>
+
+        <!-- One-Click Auto-Remediation Button -->
+        <button id="remediateHeaderBtn" onclick="runRemediationModal()" aria-label="Execute Auto Remediation Sequence" class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-lg shadow-emerald-600/25 transition-all">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Auto-Remediate</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Metric Badges Bar -->
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-6 pt-5">
-    <div class="glass-card p-4">
-      <div class="text-xs text-gray-400 uppercase font-semibold">Active Incidents</div>
-      <div class="text-2xl font-bold text-red-400 mt-1 flex items-center gap-2" id="metricIncidents">1 CRITICAL</div>
-      <div class="text-xs text-gray-500 mt-1">Payment Service Cascade</div>
-    </div>
-    <div class="glass-card p-4">
-      <div class="text-xs text-gray-400 uppercase font-semibold">Root Cause Confidence</div>
-      <div class="text-2xl font-bold text-emerald-400 mt-1" id="metricConfidence">94%</div>
-      <div class="text-xs text-gray-500 mt-1">Grounded via Causal DAG</div>
-    </div>
-    <div class="glass-card p-4">
-      <div class="text-xs text-gray-400 uppercase font-semibold">Detection Lag</div>
-      <div class="text-2xl font-bold text-cyan-400 mt-1">0.00s</div>
-      <div class="text-xs text-gray-500 mt-1">Zero-step detection lag</div>
-    </div>
-    <div class="glass-card p-4">
-      <div class="text-xs text-gray-400 uppercase font-semibold">ML Benchmark Winner</div>
-      <div class="text-2xl font-bold text-purple-400 mt-1">Autoencoder (F1: 0.85)</div>
-      <div class="text-xs text-gray-500 mt-1">0.001ms inference latency</div>
-    </div>
-  </div>
+  <!-- Interactive Chaos Scenario Switcher Banner -->
+  <section class="border-b border-white/5 bg-[var(--bg-surface)]/60 px-4 lg:px-8 py-3 z-40 relative">
+    <div class="max-w-[1720px] mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+      
+      <div class="flex items-center gap-2 text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">
+        <i class="fa-solid fa-flask-vial text-cyan-400"></i>
+        <span>Chaos Injector:</span>
+      </div>
 
-  <!-- Main Content Layout -->
-  <main class="grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 flex-1">
+      <!-- Scenarios Selector Pills -->
+      <div class="flex flex-wrap items-center gap-2 w-full md:w-auto" id="scenarioPills">
+        <button onclick="selectScenario('payment_db_exhaustion')" id="sc-payment_db_exhaustion" aria-label="Select Database Connection Pool Exhaustion scenario" class="scenario-btn px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all flex items-center gap-1.5 bg-red-500/20 text-red-300 border-red-500/40 shadow-sm">
+          <i class="fa-solid fa-database text-red-400" aria-hidden="true"></i>
+          <span>DB Pool Exhaustion (P1)</span>
+        </button>
+        <button onclick="selectScenario('memory_leak')" id="sc-memory_leak" aria-label="Select Order Service Memory Leak and OOM scenario" class="scenario-btn px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all flex items-center gap-1.5 bg-white/5 text-[var(--text-muted)] border-white/10 hover:border-white/20">
+          <i class="fa-solid fa-microchip text-amber-400" aria-hidden="true"></i>
+          <span>Memory Leak & OOM (P1)</span>
+        </button>
+        <button onclick="selectScenario('network_timeout')" id="sc-network_timeout" aria-label="Select Redis Partition and Auth Latency Spike scenario" class="scenario-btn px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all flex items-center gap-1.5 bg-white/5 text-[var(--text-muted)] border-white/10 hover:border-white/20">
+          <i class="fa-solid fa-wifi text-purple-400" aria-hidden="true"></i>
+          <span>Redis Partition (P2)</span>
+        </button>
+        <button onclick="selectScenario('nominal_healthy')" id="sc-nominal_healthy" aria-label="Select Nominal Baseline Traffic scenario" class="scenario-btn px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all flex items-center gap-1.5 bg-white/5 text-[var(--text-muted)] border-white/10 hover:border-white/20">
+          <i class="fa-solid fa-circle-check text-emerald-400" aria-hidden="true"></i>
+          <span>Nominal Baseline</span>
+        </button>
+      </div>
 
-    <!-- LEFT: AI Incident Investigation Report (7 cols) -->
-    <div class="lg:col-span-7 flex flex-col gap-6">
-      <div class="glass-card p-6 border-red-500/30">
-        <div class="flex items-start justify-between border-b border-gray-800 pb-4 mb-4">
+      <!-- Trigger Chaos Injection Button -->
+      <div class="flex items-center gap-2 w-full md:w-auto justify-end">
+        <button id="triggerSimulationBtn" onclick="runSelectedSimulation()" aria-label="Inject Chaos and Run RCA Pipeline" class="w-full md:w-auto bg-gradient-to-r from-red-600 via-rose-600 to-pink-600 hover:from-red-500 hover:to-pink-500 text-white font-bold text-xs px-4 py-2 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-red-600/30 transition-all active:scale-95">
+          <i class="fa-solid fa-bolt animate-bounce"></i>
+          <span id="simBtnText">Inject Chaos & Trace RCA</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Key Metrics Badges Bar with 3D Mouse Tilt -->
+  <section class="max-w-[1720px] w-full mx-auto px-4 lg:px-8 pt-6 z-10 relative">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      
+      <!-- Card 1: Active Incidents Status -->
+      <div class="glass-panel card-3d p-4 border-l-4 border-l-red-500 glow-border-critical" id="badgeIncidentCard">
+        <div class="card-glare"></div>
+        <div class="flex items-center justify-between text-xs text-[var(--text-muted)] uppercase font-bold tracking-wider">
+          <span>Active Incident Severity</span>
+          <span id="incidentStatusDot" class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+        </div>
+        <div class="text-2xl font-black text-red-400 mt-1 flex items-center gap-2" id="metricIncidentBadge">
+          CRITICAL P1
+        </div>
+        <div class="text-xs text-[var(--text-muted)] mt-1 flex items-center gap-1.5 truncate" id="metricIncidentDesc">
+          <i class="fa-solid fa-triangle-exclamation text-amber-400"></i>
+          <span id="metricIncidentTarget">postgres-db failure cascade</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Root Cause Confidence -->
+      <div class="glass-panel card-3d p-4 border-l-4 border-l-emerald-500">
+        <div class="card-glare"></div>
+        <div class="flex items-center justify-between text-xs text-[var(--text-muted)] uppercase font-bold tracking-wider">
+          <span>RCA Confidence</span>
+          <i class="fa-solid fa-diagram-project text-emerald-400"></i>
+        </div>
+        <div class="text-2xl font-black text-emerald-400 mt-1 flex items-baseline gap-1">
+          <span id="metricConfidenceVal" data-target="94">94</span>%
+          <span class="text-xs font-normal text-emerald-500/80">(PPR Random Walk)</span>
+        </div>
+        <div class="text-xs text-[var(--text-muted)] mt-1 truncate">
+          Causal DAG Markov Convergence
+        </div>
+      </div>
+
+      <!-- Card 3: Detection Lag -->
+      <div class="glass-panel card-3d p-4 border-l-4 border-l-cyan-500">
+        <div class="card-glare"></div>
+        <div class="flex items-center justify-between text-xs text-[var(--text-muted)] uppercase font-bold tracking-wider">
+          <span>Detection Lag</span>
+          <i class="fa-solid fa-stopwatch text-cyan-400"></i>
+        </div>
+        <div class="text-2xl font-black text-cyan-400 mt-1">
+          0.00s <span class="text-xs font-normal text-cyan-500/80">(Zero-Step)</span>
+        </div>
+        <div class="text-xs text-[var(--text-muted)] mt-1 truncate">
+          Instant step-0 threshold trigger
+        </div>
+      </div>
+
+      <!-- Card 4: ML Benchmark Winner -->
+      <div class="glass-panel card-3d p-4 border-l-4 border-l-purple-500">
+        <div class="card-glare"></div>
+        <div class="flex items-center justify-between text-xs text-[var(--text-muted)] uppercase font-bold tracking-wider">
+          <span>ML Anomaly Benchmark</span>
+          <i class="fa-solid fa-brain text-purple-400"></i>
+        </div>
+        <div class="text-2xl font-black text-purple-400 mt-1 flex items-baseline gap-1">
+          <span>Autoencoder</span>
+          <span class="text-xs font-semibold text-purple-300">(F1: 0.85)</span>
+        </div>
+        <div class="text-xs text-[var(--text-muted)] mt-1 truncate">
+          0.0011ms sub-microsecond latency
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Main Body Content: SRE Incident Workspace -->
+  <main class="max-w-[1720px] w-full mx-auto px-4 lg:px-8 py-6 grid grid-cols-1 xl:grid-cols-12 gap-6 flex-1 z-10 relative">
+
+    <!-- LEFT COLUMN: AI Multi-Agent Incident Investigation Report (7 Columns) -->
+    <section class="xl:col-span-7 flex flex-col gap-6" aria-labelledby="aiInvestigationHeading">
+      
+      <!-- Primary Incident Report Card with 3D Tilt -->
+      <article class="glass-panel card-3d p-6 border-red-500/40 relative overflow-hidden" id="mainIncidentCard">
+        <div class="card-glare"></div>
+        
+        <!-- Incident Header Details -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4 mb-5">
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wider bg-red-500/20 text-red-400 border border-red-500/30">P1 Incident</span>
-              <span class="text-xs text-gray-400" id="incDetectedTime">Detected at 14:32:08 UTC</span>
+              <span id="incSeverityPill" class="px-2.5 py-0.5 rounded text-xs font-extrabold uppercase tracking-wider bg-red-500/20 text-red-400 border border-red-500/30">
+                P1 CRITICAL
+              </span>
+              <span class="text-xs text-[var(--text-muted)]" id="incDetectedTime">
+                Detected at 14:32:08 UTC
+              </span>
             </div>
-            <h2 class="text-xl font-bold text-white mt-1" id="incTitle">Payment Service Failure</h2>
+            <h2 id="aiInvestigationHeading" class="text-xl sm:text-2xl font-black text-white mt-1.5 tracking-tight flex items-center gap-2">
+              <span id="incTitle">PostgreSQL Connection Pool Exhaustion</span>
+            </h2>
           </div>
-          <div class="text-right">
-            <span class="text-xs text-gray-400 uppercase font-semibold">Root Cause Confidence</span>
-            <div class="text-3xl font-extrabold text-emerald-400 flex items-center justify-end gap-1 mt-0.5" id="incConfidence">
+
+          <div class="sm:text-right flex sm:flex-col items-center sm:items-end justify-between">
+            <span class="text-xs text-[var(--text-muted)] uppercase font-bold tracking-wider">Root Cause Confidence</span>
+            <div class="text-3xl font-black text-emerald-400 flex items-center gap-1" id="incConfidence">
               94%
             </div>
           </div>
         </div>
 
-        <!-- Structured AI Findings -->
-        <div class="space-y-4 text-sm">
-          <div class="bg-gray-900/60 p-3.5 rounded-lg border border-gray-800">
-            <div class="text-xs font-bold text-gray-400 uppercase tracking-wide flex items-center gap-2">
-              <i class="fa-solid fa-triangle-exclamation text-amber-400"></i> Anomaly Detected
+        <!-- Structured Root Cause Findings Grid -->
+        <div class="space-y-3.5 text-sm">
+          
+          <!-- Anomaly Detected -->
+          <div class="bg-[var(--bg-surface)]/80 p-4 rounded-xl border border-white/10 hover:border-amber-400/40 transition-colors">
+            <div class="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span>Observed Anomaly Cascade</span>
             </div>
-            <div class="text-gray-200 mt-1 font-medium" id="incAnomaly">
+            <p class="text-gray-200 mt-1.5 font-medium leading-relaxed" id="incAnomaly">
               Payment service response time increased from 120 ms to 4,800 ms.
-            </div>
+            </p>
           </div>
 
-          <div class="bg-gray-900/60 p-3.5 rounded-lg border border-gray-800">
-            <div class="text-xs font-bold text-gray-400 uppercase tracking-wide flex items-center gap-2">
-              <i class="fa-solid fa-bullseye text-red-400"></i> Root Cause Identified
+          <!-- Root Cause Isolated -->
+          <div class="bg-red-950/20 p-4 rounded-xl border border-red-500/30 hover:border-red-500/60 transition-colors">
+            <div class="text-xs font-bold text-red-400 uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-bullseye"></i>
+              <span>Root Cause Isolated via Causal DAG</span>
             </div>
-            <div class="text-red-300 font-semibold mt-1" id="incRootCause">
+            <div class="text-red-200 font-bold mt-1.5 text-base" id="incRootCause">
               Database connection pool exhausted.
             </div>
           </div>
 
-          <div class="bg-gray-900/60 p-3.5 rounded-lg border border-gray-800">
-            <div class="text-xs font-bold text-gray-400 uppercase tracking-wide flex items-center gap-2">
-              <i class="fa-solid fa-diagram-project text-cyan-400"></i> Related Services Causal Chain
+          <!-- Causal Propagation Chain -->
+          <div class="bg-[var(--bg-surface)]/80 p-4 rounded-xl border border-white/10 hover:border-cyan-400/40 transition-colors">
+            <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-diagram-project"></i>
+              <span>Causal Dependency Propagation Path</span>
             </div>
-            <div class="text-cyan-300 font-mono text-xs mt-1" id="incCausalPath">
-              Postgres Db → Payment Service → Order Service → Api Gateway
+            <div class="text-cyan-300 font-mono text-xs sm:text-sm mt-1.5 font-semibold flex items-center flex-wrap gap-1.5" id="incCausalPath">
+              <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-300 border border-red-500/30">Postgres DB</span>
+              <i class="fa-solid fa-arrow-right text-[10px] text-gray-500"></i>
+              <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Payment Service</span>
+              <i class="fa-solid fa-arrow-right text-[10px] text-gray-500"></i>
+              <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Order Service</span>
+              <i class="fa-solid fa-arrow-right text-[10px] text-gray-500"></i>
+              <span class="px-2 py-0.5 rounded bg-gray-500/20 text-gray-300 border border-gray-500/30">API Gateway</span>
             </div>
           </div>
 
-          <div class="bg-gray-900/60 p-3.5 rounded-lg border border-gray-800">
-            <div class="text-xs font-bold text-gray-400 uppercase tracking-wide flex items-center gap-2">
-              <i class="fa-solid fa-lightbulb text-emerald-400"></i> Suggested Solution
+          <!-- Multi-Agent Reasoning Tabs -->
+          <div class="bg-[var(--bg-surface)]/80 p-4 rounded-xl border border-white/10">
+            <div class="flex items-center justify-between border-b border-white/10 pb-2 mb-3">
+              <div class="text-xs font-bold text-purple-400 uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-robot"></i>
+                <span>Multi-Agent AI Reasoning Breakdown</span>
+              </div>
+              <div class="flex items-center gap-1" id="agentTabs" role="tablist" aria-label="Multi-Agent AI reasoning options">
+                <button onclick="switchAgentTab('analyst')" id="tab-analyst" role="tab" aria-selected="true" aria-label="View Log Pattern Analyst findings" class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">Log Analyst</button>
+                <button onclick="switchAgentTab('tracer')" id="tab-tracer" role="tab" aria-selected="false" aria-label="View Topology Tracer findings" class="px-2.5 py-1 rounded-md text-[11px] font-semibold text-[var(--text-muted)] hover:text-white">Topology Tracer</button>
+                <button onclick="switchAgentTab('advisor')" id="tab-advisor" role="tab" aria-selected="false" aria-label="View RAG Advisor findings" class="px-2.5 py-1 rounded-md text-[11px] font-semibold text-[var(--text-muted)] hover:text-white">RAG Advisor</button>
+              </div>
             </div>
-            <div class="text-gray-300 mt-1 leading-relaxed" id="incSolution">
+
+            <div id="agentTabContent" role="tabpanel" aria-live="polite" class="text-xs text-gray-300 leading-relaxed min-h-[48px]">
+              Loading autonomous agent deliberations...
+            </div>
+          </div>
+
+          <!-- Suggested Solution -->
+          <div class="bg-[var(--bg-surface)]/80 p-4 rounded-xl border border-white/10">
+            <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <span>RAG-Grounded SRE Solution</span>
+            </div>
+            <p class="text-gray-300 mt-1.5 leading-relaxed text-xs sm:text-sm" id="incSolution">
               Investigate connection leaks and review database connection pool limits. Terminate long-running idle transactions and verify connection release logic.
-            </div>
+            </p>
           </div>
 
-          <!-- Suggested Remediation Commands -->
-          <div class="mt-4">
-            <div class="text-xs font-bold text-gray-400 uppercase tracking-wide mb-2 flex items-center gap-2">
-              <i class="fa-solid fa-terminal text-indigo-400"></i> One-Click Remediation Snippets
+          <!-- Verified Remediation Code Block & Execution Trigger -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider flex items-center gap-1.5">
+                <i class="fa-solid fa-terminal text-indigo-400"></i>
+                <span>One-Click Verified Playbook Snippet</span>
+              </span>
+              <div class="flex items-center gap-2">
+                <button onclick="copyCommands()" aria-label="Copy Remediation Commands to clipboard" class="text-xs text-cyan-400 hover:text-cyan-300 flex items-center gap-1">
+                  <i class="fa-regular fa-copy"></i> Copy
+                </button>
+                <button onclick="runRemediationModal()" aria-label="Open Automated SRE Runbook Remediation Console" class="px-3 py-1 rounded bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-600/30 transition-all">
+                  <i class="fa-solid fa-play"></i> Run Auto-Remediation
+                </button>
+              </div>
             </div>
-            <pre class="bg-[#090d16] p-3 rounded-lg text-emerald-400 font-mono text-xs overflow-x-auto border border-gray-800" id="incCommands">SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE state = 'idle in transaction';
+            <pre class="terminal-window p-3.5 rounded-xl text-emerald-400 text-xs overflow-x-auto ring-1 ring-white/10 shadow-inner" id="incCommands">SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE state = 'idle in transaction';
 SHOW max_connections;</pre>
           </div>
-        </div>
-      </div>
 
-      <!-- ML Benchmark Summary Card -->
-      <div class="glass-card p-5">
-        <h3 class="text-sm font-bold text-white flex items-center gap-2 mb-3">
-          <i class="fa-solid fa-chart-simple text-purple-400"></i> Anomaly Detection Benchmark (Live Metrics)
-        </h3>
+        </div>
+      </article>
+
+      <!-- ML Anomaly Detection Benchmark Card with 3D Tilt -->
+      <article class="glass-panel card-3d p-6 border-white/10">
+        <div class="card-glare"></div>
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 border border-purple-500/20">
+              <i class="fa-solid fa-chart-column"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-bold text-white">ML Anomaly Detection Benchmark</h3>
+              <p class="text-[11px] text-[var(--text-muted)]">Evaluated on multi-phase microservice chaos telemetry</p>
+            </div>
+          </div>
+          <span class="text-xs text-purple-400 font-mono font-bold bg-purple-500/10 px-2.5 py-1 rounded border border-purple-500/20">
+            Winner: Autoencoder (F1: 0.8462)
+          </span>
+        </div>
+
         <div class="overflow-x-auto">
           <table class="w-full text-xs text-left text-gray-300">
-            <thead class="text-gray-400 uppercase bg-gray-900/80 border-b border-gray-800">
+            <thead class="text-gray-400 uppercase bg-white/5 border-b border-white/10 text-[10px] tracking-wider">
               <tr>
-                <th class="py-2 px-3">Model Architecture</th>
-                <th class="py-2 px-3">Precision</th>
-                <th class="py-2 px-3">Recall</th>
-                <th class="py-2 px-3">F1-Score</th>
-                <th class="py-2 px-3">Latency</th>
-                <th class="py-2 px-3">Lag</th>
+                <th class="py-2.5 px-3">Model Architecture</th>
+                <th class="py-2.5 px-3">Precision</th>
+                <th class="py-2.5 px-3">Recall</th>
+                <th class="py-2.5 px-3 font-bold text-purple-300">F1-Score</th>
+                <th class="py-2.5 px-3">Inference Latency</th>
+                <th class="py-2.5 px-3 text-emerald-400">Detection Lag</th>
               </tr>
             </thead>
-            <tbody id="benchmarkTable" class="divide-y divide-gray-800 font-mono">
-              <tr><td colspan="6" class="p-3 text-center text-gray-500">Loading benchmark evaluation...</td></tr>
+            <tbody id="benchmarkTable" class="divide-y divide-white/5 font-mono">
+              <tr><td colspan="6" class="p-4 text-center text-gray-500">Loading benchmark evaluation metrics...</td></tr>
             </tbody>
           </table>
         </div>
-      </div>
-    </div>
+      </article>
 
-    <!-- RIGHT: Topology Graph & Telemetry Timeline (5 cols) -->
-    <div class="lg:col-span-5 flex flex-col gap-6">
+    </section>
 
-      <!-- Topology Visualizer -->
-      <div class="glass-card p-5">
+    <!-- RIGHT COLUMN: 3D WebGL Cluster / Topology & Real-time Telemetry (5 Columns) -->
+    <section class="xl:col-span-5 flex flex-col gap-6" aria-labelledby="topologyVisualizerHeading">
+      
+      <!-- 3D WebGL Microservice Cluster & 2D Graph Visualizer with 3D Tilt -->
+      <article class="glass-panel card-3d p-5 border-cyan-500/20 flex flex-col relative">
+        <div class="card-glare"></div>
+
         <div class="flex items-center justify-between mb-3">
-          <h3 class="text-sm font-bold text-white flex items-center gap-2">
-            <i class="fa-solid fa-network-wired text-cyan-400"></i> Service Dependency Graph
-          </h3>
-          <span class="text-xs text-gray-400">Causal Propagation</span>
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20">
+              <i class="fa-solid fa-cubes"></i>
+            </div>
+            <div>
+              <h3 id="topologyVisualizerHeading" class="text-sm font-bold text-white flex items-center gap-2">
+                Service Mesh Topology
+              </h3>
+              <p class="text-[11px] text-[var(--text-muted)]" id="topoSubLabel">Interactive 3D WebGL Universe</p>
+            </div>
+          </div>
+
+          <!-- Dual View Switcher (3D WebGL vs 2D Flow) -->
+          <div class="flex items-center bg-white/5 p-0.5 rounded-lg border border-white/10 text-xs font-semibold" role="group" aria-label="Topology visualizer mode">
+            <button onclick="setTopoView('3d')" id="btnView3d" aria-label="Switch to 3D WebGL Service Mesh Universe view" class="px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 flex items-center gap-1.5 transition-all">
+              <i class="fa-solid fa-cube" aria-hidden="true"></i> 3D Universe
+            </button>
+            <button onclick="setTopoView('2d')" id="btnView2d" aria-label="Switch to 2D Topological DAG Flow view" class="px-2.5 py-1 rounded text-[var(--text-muted)] hover:text-white flex items-center gap-1.5 transition-all">
+              <i class="fa-solid fa-diagram-project" aria-hidden="true"></i> 2D Graph
+            </button>
+          </div>
         </div>
 
-        <div class="bg-[#090d16] rounded-xl p-4 border border-gray-800 flex flex-col items-center justify-center relative min-h-[290px]">
-          <!-- SVG Diagram of Topology -->
-          <svg width="340" height="260" viewBox="0 0 340 260" class="overflow-visible">
-            <!-- Edges -->
-            <line x1="170" y1="35" x2="80" y2="90" stroke="#374151" stroke-width="2" />
-            <line x1="170" y1="35" x2="260" y2="90" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="4" />
-            <line x1="80" y1="90" x2="80" y2="155" stroke="#374151" stroke-width="2" />
-            <line x1="260" y1="90" x2="260" y2="155" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="4" />
-            <line x1="260" y1="155" x2="170" y2="220" stroke="#ef4444" stroke-width="3" />
+        <!-- 3D WebGL Viewport Container -->
+        <div id="topo3dContainer" class="relative w-full h-[340px] rounded-xl overflow-hidden bg-[#040711] border border-white/10">
+          <canvas id="topo3dCanvas" role="img" aria-label="Interactive 3D WebGL Microservice Cluster Universe" class="w-full h-full cursor-grab active:cursor-grabbing"></canvas>
+          
+          <!-- 3D Viewport Controls Overlay -->
+          <div class="absolute bottom-2.5 left-2.5 flex items-center gap-1.5 z-20">
+            <button onclick="reset3DCamera()" aria-label="Reset 3D camera viewpoint" class="px-2 py-1 rounded bg-black/60 hover:bg-black/90 text-[10px] text-gray-300 border border-white/10 backdrop-blur" title="Reset Camera">
+              <i class="fa-solid fa-camera-rotate" aria-hidden="true"></i> Reset
+            </button>
+            <button id="autoRotateBtn" onclick="toggleAutoRotate()" aria-label="Toggle 3D auto orbit rotation" class="px-2 py-1 rounded bg-black/60 hover:bg-black/90 text-[10px] text-cyan-400 border border-white/10 backdrop-blur" title="Auto Orbit">
+              <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i> Orbit
+            </button>
+          </div>
 
-            <!-- Edge Marker / Flow -->
-            <!-- API Gateway -->
-            <g transform="translate(170, 35)">
-              <circle r="22" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5" />
+          <!-- Node Telemetry Floating Inspection HUD (Shown on 3D node click) -->
+          <div id="node3dHud" class="hidden absolute top-2.5 right-2.5 w-48 p-2.5 rounded-lg bg-black/85 border border-cyan-500/40 backdrop-blur-md text-[11px] text-gray-200 z-20 shadow-xl transition-all">
+            <div class="flex items-center justify-between border-b border-white/10 pb-1 mb-1.5">
+              <span id="hudNodeName" class="font-bold text-white uppercase tracking-wider">postgres-db</span>
+              <span id="hudNodeStatus" class="px-1.5 py-0.2 rounded text-[9px] font-bold bg-red-500/20 text-red-400">CRITICAL</span>
+            </div>
+            <div class="space-y-1 font-mono text-[10px]">
+              <div class="flex justify-between"><span>CPU Usage:</span> <span id="hudCpu" class="text-cyan-300">98.4%</span></div>
+              <div class="flex justify-between"><span>Memory:</span> <span id="hudMem" class="text-purple-300">94.1%</span></div>
+              <div class="flex justify-between"><span>P95 Latency:</span> <span id="hudLat" class="text-red-400">4,850ms</span></div>
+              <div class="flex justify-between"><span>Error Rate:</span> <span id="hudErr" class="text-red-400">84.5%</span></div>
+            </div>
+          </div>
+
+          <div class="absolute bottom-2.5 right-2.5 text-[10px] text-gray-400 bg-black/60 px-2 py-0.5 rounded border border-white/10 backdrop-blur pointer-events-none">
+            Drag to Rotate • Scroll to Zoom
+          </div>
+        </div>
+
+        <!-- 2D SVG Topological Fallback Graph Container (Hidden when 3D is active) -->
+        <div id="topo2dContainer" class="hidden relative w-full h-[340px] rounded-xl overflow-hidden bg-[#040711] border border-white/10 flex flex-col items-center justify-center">
+          <svg width="360" height="280" viewBox="0 0 360 280" class="overflow-visible" id="topo2dSvg" role="img" aria-label="Microservice Topological Directed Acyclic Graph">
+            <title>Microservice Topological Directed Acyclic Graph</title>
+            <!-- Edges dynamically drawn -->
+            <line x1="180" y1="35" x2="85" y2="95" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+            <line x1="180" y1="35" x2="275" y2="95" stroke="#ff3366" stroke-width="2.5" stroke-dasharray="4" />
+            <line x1="85" y1="95" x2="85" y2="165" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+            <line x1="275" y1="95" x2="275" y2="165" stroke="#ff3366" stroke-width="2.5" stroke-dasharray="4" />
+            <line x1="275" y1="165" x2="180" y2="235" stroke="#ff3366" stroke-width="3" />
+            <line x1="275" y1="95" x2="180" y2="235" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+            
+            <!-- Nodes -->
+            <g transform="translate(180, 35)">
+              <circle r="22" fill="#0f172a" stroke="#f59e0b" stroke-width="2.5" />
               <text y="4" text-anchor="middle" fill="#f8fafc" font-size="9" font-weight="bold">Gateway</text>
             </g>
-
-            <!-- Auth Service -->
-            <g transform="translate(80, 90)">
-              <circle r="20" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+            <g transform="translate(85, 95)">
+              <circle r="20" fill="#0f172a" stroke="#10b981" stroke-width="2" />
               <text y="4" text-anchor="middle" fill="#f8fafc" font-size="8">Auth</text>
             </g>
-
-            <!-- Order Service -->
-            <g transform="translate(260, 90)">
-              <circle r="20" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5" />
+            <g transform="translate(275, 95)">
+              <circle r="20" fill="#0f172a" stroke="#f59e0b" stroke-width="2.5" />
               <text y="4" text-anchor="middle" fill="#f8fafc" font-size="8">Order</text>
             </g>
-
-            <!-- Redis Cache -->
-            <g transform="translate(80, 155)">
-              <circle r="18" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+            <g transform="translate(85, 165)">
+              <circle r="18" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
               <text y="4" text-anchor="middle" fill="#f8fafc" font-size="8">Redis</text>
             </g>
-
-            <!-- Payment Service -->
-            <g transform="translate(260, 155)">
-              <circle r="22" fill="#1e293b" stroke="#ef4444" stroke-width="2.5" class="pulse-danger" />
+            <g transform="translate(275, 165)">
+              <circle r="22" fill="#0f172a" stroke="#ff3366" stroke-width="2.5" class="animate-pulse" />
               <text y="4" text-anchor="middle" fill="#f8fafc" font-size="8" font-weight="bold">Payment</text>
             </g>
-
-            <!-- Postgres DB (Root Cause) -->
-            <g transform="translate(170, 220)">
-              <circle r="26" fill="#7f1d1d" stroke="#ef4444" stroke-width="3.5" class="pulse-danger" />
+            <g transform="translate(180, 235)">
+              <circle r="26" fill="#450a0a" stroke="#ff3366" stroke-width="3.5" class="animate-pulse" />
               <text y="4" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="extrabold">Postgres DB</text>
             </g>
           </svg>
+        </div>
 
-          <div class="flex items-center gap-4 text-[11px] text-gray-400 mt-2">
-            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-red-500"></span> Root Cause</span>
-            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> Blast Radius</span>
-            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Healthy</span>
+        <!-- Legend -->
+        <div class="flex items-center justify-between text-[11px] text-[var(--text-muted)] mt-3 px-1">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-red-500 shadow-sm shadow-red-500"></span> Root Cause</span>
+            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> Blast Radius</span>
+            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Healthy</span>
+          </div>
+          <span class="font-mono text-[10px] text-gray-500">8 Services / 9 Links</span>
+        </div>
+      </article>
+
+      <!-- Real-Time Anomaly Telemetry Timeline Chart with 3D Tilt -->
+      <article class="glass-panel card-3d p-5 flex flex-col flex-1 border-white/10 min-h-[280px]">
+        <div class="card-glare"></div>
+
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 border border-indigo-500/20">
+              <i class="fa-solid fa-wave-square"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-bold text-white">Telemetry Anomaly Timeline</h3>
+              <p class="text-[11px] text-[var(--text-muted)]">P95 Latency Spike vs Error Ratio</p>
+            </div>
+          </div>
+          <span class="text-[11px] text-indigo-400 font-mono font-bold bg-indigo-500/10 px-2 py-0.5 rounded border border-indigo-500/20">
+            2.0s Sliding Window
+          </span>
+        </div>
+
+        <div class="flex-1 min-h-[200px] w-full relative">
+          <canvas id="timelineChart" role="img" aria-label="Microservice Telemetry Anomaly Timeline Chart displaying P95 Latency and Error Rate trends"></canvas>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- FULL WIDTH: Live Real-Time Distributed Log Streamer (12 Columns) -->
+    <section class="xl:col-span-12 glass-panel p-5 border-white/10" aria-labelledby="liveLogStreamerHeading">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
+        
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 border border-emerald-500/20">
+            <i class="fa-solid fa-list-check"></i>
+          </div>
+          <div>
+            <h3 id="liveLogStreamerHeading" class="text-sm font-bold text-white flex items-center gap-2">
+              Live Ingested Telemetry Logs
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                Drain Tree Wildcards Extracted
+              </span>
+            </h3>
+            <p class="text-[11px] text-[var(--text-muted)]">Real-time structured event miner stream</p>
           </div>
         </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="flex items-center gap-2 flex-wrap">
+          <div class="relative">
+            <label for="logSearchInput" class="sr-only">Search ingested logs</label>
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-xs text-gray-400" aria-hidden="true"></i>
+            <input type="text" id="logSearchInput" name="logSearchInput" aria-label="Search ingested logs by service, template, or message" oninput="filterLogs()" placeholder="Search template, service, or message..." class="bg-black/60 border border-white/10 rounded-lg pl-8 pr-3 py-1.5 text-xs text-gray-200 focus:outline-none focus:border-cyan-400 w-48 sm:w-64 transition-all">
+          </div>
+          <div>
+            <label for="logLevelSelect" class="sr-only">Filter logs by severity level</label>
+            <select id="logLevelSelect" name="logLevelSelect" aria-label="Filter logs by severity level" onchange="filterLogs()" class="bg-black/60 border border-white/10 rounded-lg px-2.5 py-1.5 text-xs text-gray-200 focus:outline-none focus:border-cyan-400">
+              <option value="ALL">All Levels</option>
+              <option value="CRITICAL">CRITICAL</option>
+              <option value="ERROR">ERROR</option>
+              <option value="WARN">WARN</option>
+              <option value="INFO">INFO</option>
+            </select>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Anomaly Latency Timeline -->
-      <div class="glass-card p-5 flex-1 flex flex-col">
-        <h3 class="text-sm font-bold text-white flex items-center gap-2 mb-3">
-          <i class="fa-solid fa-wave-square text-indigo-400"></i> Telemetry Anomaly Timeline
-        </h3>
-        <div class="flex-1 min-h-[190px]">
-          <canvas id="timelineChart"></canvas>
+      <!-- Log Terminal Box -->
+      <div id="logsTerminalContainer" class="terminal-window rounded-xl p-3 h-56 overflow-y-auto font-mono text-[11px] space-y-1.5 ring-1 ring-white/10">
+        <div class="text-gray-500 text-center py-6">Connecting to log stream...</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Remediation Execution Modal (Live Simulated Terminal) -->
+  <div id="remediationModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity">
+    <div class="glass-panel w-full max-w-2xl border-emerald-500/40 p-6 shadow-2xl relative">
+      
+      <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+            <i class="fa-solid fa-terminal"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white">SRE Automated Runbook Execution</h3>
+            <p class="text-xs text-[var(--text-muted)]">Grounded via RAG Playbook Engine</p>
+          </div>
+        </div>
+        <button onclick="closeRemediationModal()" aria-label="Close Remediation Dialog" class="text-gray-400 hover:text-white text-lg">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="terminal-window p-4 rounded-xl text-xs h-64 overflow-y-auto space-y-1 text-gray-200" id="remediationTerminalLogs" role="log" aria-live="polite">
+        <div class="text-emerald-400">[READY] Waiting for user confirmation to execute remediation sequence...</div>
+      </div>
+
+      <div class="flex items-center justify-between mt-5 pt-3 border-t border-white/10">
+        <span class="text-xs text-gray-400" id="remActionStatus">Ready to execute</span>
+        <div class="flex items-center gap-2">
+          <button onclick="closeRemediationModal()" aria-label="Cancel Remediation and close dialog" class="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-xs font-semibold text-gray-300">
+            Cancel
+          </button>
+          <button id="execRemBtn" onclick="confirmRunRemediation()" aria-label="Execute Verified SRE Remediation Playbook" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-lg shadow-emerald-600/30 flex items-center gap-2">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i> Execute Playbook
+          </button>
         </div>
       </div>
 
     </div>
-  </main>
+  </div>
 
+  <!-- Semantic Accessible Footer for High SEO Authority -->
+  <footer class="border-t border-white/10 bg-[var(--bg-surface)] px-6 py-8 mt-12 text-xs text-[var(--text-muted)] z-10 relative">
+    <div class="max-w-[1720px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold">Ψ</div>
+        <div>
+          <span class="font-bold text-white">TraceMind AIOps Platform</span> — Enterprise Observability & Root Cause Analysis
+          <div class="text-[11px] text-gray-500">Autonomous SRE Multi-Agent Synthesis & Causal Topology Tracing</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="/api/docs" class="hover:text-cyan-400 transition-colors">FastAPI Interactive Docs</a>
+        <a href="/sitemap.xml" class="hover:text-cyan-400 transition-colors">Sitemap</a>
+        <a href="/robots.txt" class="hover:text-cyan-400 transition-colors">Robots.txt</a>
+        <a href="https://github.com/your-username/Tracemind" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">
+          <i class="fa-brands fa-github"></i> GitHub Source
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic: 3D WebGL Universe, Themes, Sounds, Charts, SRE Engine -->
   <script>
-    let chartInstance = null;
     const API_BASE = window.location.protocol.startsWith('http') ? '' : 'http://127.0.0.1:8000';
+    let currentScenario = 'payment_db_exhaustion';
+    let currentIncidentData = null;
+    let chartInstance = null;
+    let cachedLogs = [];
+    let audioEnabled = true;
+    let audioCtx = null;
 
-    async function loadData() {
+    // Web Audio Synthesizer for high-tech UI sounds
+    function playTone(freq, type = 'sine', duration = 0.08) {
+      if (!audioEnabled) return;
       try {
-        // Fetch incidents
-        const incRes = await fetch(`${API_BASE}/api/v1/incidents`);
-        const incidents = await incRes.json();
-        if (incidents && incidents.length > 0) {
-          const inc = incidents[incidents.length - 1];
-          document.getElementById('incTitle').innerText = inc.title;
-          document.getElementById('incConfidence').innerText = `${inc.confidence_percentage}%`;
-          document.getElementById('metricConfidence').innerText = `${inc.confidence_percentage}%`;
-          const timePart = inc.detected_at.includes(' ') ? inc.detected_at.split(' ')[1] : inc.detected_at;
-          document.getElementById('incDetectedTime').innerText = `Detected at ${timePart} UTC`;
-          document.getElementById('incAnomaly').innerText = inc.anomaly_detected_summary;
-          document.getElementById('incRootCause').innerText = inc.root_cause_identified;
-          document.getElementById('incCausalPath').innerText = inc.related_services_path;
-          document.getElementById('incSolution').innerText = inc.suggested_solution;
-          if (inc.remediation_commands && inc.remediation_commands.length > 0) {
-            document.getElementById('incCommands').innerText = inc.remediation_commands.join('\n\n');
-          }
-        }
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {}
+    }
 
-        // Fetch benchmarks
-        const benchRes = await fetch(`${API_BASE}/api/v1/benchmarks`);
-        const benchData = await benchRes.json();
-        if (benchData && benchData.results) {
-          const tbody = document.getElementById('benchmarkTable');
-          tbody.innerHTML = benchData.results.map(r => `
-            <tr class="hover:bg-gray-800/40">
-              <td class="py-2.5 px-3 font-semibold text-white">${r.model_name}</td>
-              <td class="py-2.5 px-3 text-cyan-400">${(r.precision * 100).toFixed(1)}%</td>
-              <td class="py-2.5 px-3 text-emerald-400">${(r.recall * 100).toFixed(1)}%</td>
-              <td class="py-2.5 px-3 font-bold text-purple-400">${r.f1_score.toFixed(4)}</td>
-              <td class="py-2.5 px-3 text-gray-400">${r.avg_inference_latency_ms.toFixed(4)}ms</td>
-              <td class="py-2.5 px-3 text-emerald-400">${r.detection_latency_steps}</td>
-            </tr>
-          `).join('');
-        }
-
-        // Fetch timeline metrics
-        const timeRes = await fetch(`${API_BASE}/api/v1/metrics/timeline`);
-        const timeline = await timeRes.json();
-        if (timeline && timeline.length > 0) {
-          renderChart(timeline);
-        } else {
-          // Fallback realistic timeline points
-          renderChart([
-            { window_index: 0, p95_latency: 160, error_rate: 0 },
-            { window_index: 1, p95_latency: 180, error_rate: 0 },
-            { window_index: 2, p95_latency: 650, error_rate: 5 },
-            { window_index: 3, p95_latency: 1400, error_rate: 20 },
-            { window_index: 4, p95_latency: 4850, error_rate: 65 },
-            { window_index: 5, p95_latency: 4920, error_rate: 70 },
-            { window_index: 6, p95_latency: 210, error_rate: 0 },
-            { window_index: 7, p95_latency: 155, error_rate: 0 }
-          ]);
-        }
-      } catch (err) {
-        console.warn('Backend query issue, using initialized state:', err);
-        renderChart([
-          { window_index: 0, p95_latency: 160, error_rate: 0 },
-          { window_index: 1, p95_latency: 180, error_rate: 0 },
-          { window_index: 2, p95_latency: 650, error_rate: 5 },
-          { window_index: 3, p95_latency: 1400, error_rate: 20 },
-          { window_index: 4, p95_latency: 4850, error_rate: 65 },
-          { window_index: 5, p95_latency: 4920, error_rate: 70 },
-          { window_index: 6, p95_latency: 210, error_rate: 0 },
-          { window_index: 7, p95_latency: 155, error_rate: 0 }
-        ]);
+    function toggleAudio() {
+      audioEnabled = !audioEnabled;
+      const icon = document.getElementById('soundIcon');
+      if (audioEnabled) {
+        icon.className = 'fa-solid fa-volume-high';
+        playTone(660);
+      } else {
+        icon.className = 'fa-solid fa-volume-xmark';
       }
     }
 
-    function renderChart(timeline) {
+    // Theme Engine
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('tracemind_theme', theme);
+      document.getElementById('themeMenu').classList.add('hidden');
+      
+      const dot = document.getElementById('themeDot');
+      const label = document.getElementById('themeLabel');
+      
+      if (theme === 'cyberpunk') {
+        dot.className = 'w-2.5 h-2.5 rounded-full bg-cyan-400';
+        label.innerText = 'Cyberpunk';
+      } else if (theme === 'matrix') {
+        dot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400';
+        label.innerText = 'Matrix';
+      } else if (theme === 'slate') {
+        dot.className = 'w-2.5 h-2.5 rounded-full bg-indigo-400';
+        label.innerText = 'Quantum Slate';
+      } else if (theme === 'solar') {
+        dot.className = 'w-2.5 h-2.5 rounded-full bg-amber-400';
+        label.innerText = 'Solar Flare';
+      }
+      playTone(520);
+      update3DThemeColors();
+    }
+
+    function toggleThemeMenu() {
+      const menu = document.getElementById('themeMenu');
+      menu.classList.toggle('hidden');
+      playTone(440);
+    }
+
+    // 3D Perspective Tilt Card System
+    function initCardTilt() {
+      const cards = document.querySelectorAll('.card-3d');
+      cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = ((y - centerY) / centerY) * -6;
+          const rotateY = ((x - centerX) / centerX) * 6;
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.012, 1.012, 1.012)`;
+          
+          const glare = card.querySelector('.card-glare');
+          if (glare) {
+            glare.style.opacity = '1';
+            glare.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.08) 0%, transparent 60%)`;
+          }
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+          const glare = card.querySelector('.card-glare');
+          if (glare) glare.style.opacity = '0';
+        });
+      });
+    }
+
+    // Animate Numeric Rollups
+    function animateCounters() {
+      const counters = document.querySelectorAll('[data-target]');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let current = 0;
+        const inc = target / 25;
+        const update = () => {
+          current += inc;
+          if (current < target) {
+            counter.innerText = Math.ceil(current);
+            requestAnimationFrame(update);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        update();
+      });
+    }
+
+    // Switch Scenario Selection
+    function selectScenario(scId) {
+      currentScenario = scId;
+      document.querySelectorAll('.scenario-btn').forEach(btn => {
+        btn.className = 'scenario-btn px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all flex items-center gap-1.5 bg-white/5 text-[var(--text-muted)] border-white/10 hover:border-white/20';
+      });
+      const activeBtn = document.getElementById(`sc-${scId}`);
+      if (activeBtn) {
+        if (scId === 'payment_db_exhaustion') {
+          activeBtn.className = 'scenario-btn px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all flex items-center gap-1.5 bg-red-500/20 text-red-300 border-red-500/40 shadow-sm';
+        } else if (scId === 'memory_leak') {
+          activeBtn.className = 'scenario-btn px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all flex items-center gap-1.5 bg-amber-500/20 text-amber-300 border-amber-500/40 shadow-sm';
+        } else if (scId === 'network_timeout') {
+          activeBtn.className = 'scenario-btn px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all flex items-center gap-1.5 bg-purple-500/20 text-purple-300 border-purple-500/40 shadow-sm';
+        } else {
+          activeBtn.className = 'scenario-btn px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all flex items-center gap-1.5 bg-emerald-500/20 text-emerald-300 border-emerald-500/40 shadow-sm';
+        }
+      }
+      playTone(480);
+    }
+
+    // Trigger Chaos Simulation
+    async function runSelectedSimulation() {
+      const btn = document.getElementById('triggerSimulationBtn');
+      const text = document.getElementById('simBtnText');
+      btn.disabled = true;
+      text.innerHTML = 'Injecting Chaos Telemetry...';
+      playTone(330, 'sawtooth', 0.2);
+
+      try {
+        const res = await fetch(`${API_BASE}/api/v1/chaos/simulate`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ scenario: currentScenario, duration_seconds: 60 })
+        });
+        const data = await res.json();
+        playTone(720, 'sine', 0.15);
+        await loadAllData();
+      } catch (err) {
+        alert('Simulation execution failed: ' + err.message);
+      } finally {
+        btn.disabled = false;
+        text.innerHTML = 'Inject Chaos & Trace RCA';
+      }
+    }
+
+    // Multi-Agent Reasoning Tab Switcher
+    function switchAgentTab(tab) {
+      if (!currentIncidentData) return;
+      playTone(400);
+      const reasoning = currentIncidentData.agent_reasoning || {};
+      const container = document.getElementById('agentTabContent');
+      
+      document.querySelectorAll('#agentTabs button').forEach(b => {
+        b.className = 'px-2.5 py-1 rounded-md text-[11px] font-semibold text-[var(--text-muted)] hover:text-white';
+      });
+
+      const activeBtn = document.getElementById(`tab-${tab}`);
+      if (activeBtn) {
+        activeBtn.className = 'px-2.5 py-1 rounded-md text-[11px] font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30';
+      }
+
+      if (tab === 'analyst') {
+        container.innerHTML = `<span class="text-purple-300 font-semibold">[Log Pattern Analyst]</span> ${reasoning.log_pattern_analyst || 'Identified anomalous event template spikes.'}`;
+      } else if (tab === 'tracer') {
+        container.innerHTML = `<span class="text-cyan-300 font-semibold">[Topology Tracer]</span> ${reasoning.topology_tracer || 'Computed upstream blast radius and Markov causal flow.'}`;
+      } else if (tab === 'advisor') {
+        container.innerHTML = `<span class="text-emerald-300 font-semibold">[Remediation Advisor]</span> ${reasoning.remediation_advisor || 'Matched SRE runbook with verified SQL/CLI remediation.'}`;
+      }
+    }
+
+    // Dual Topology View Toggle
+    function setTopoView(mode) {
+      playTone(420);
+      const v3d = document.getElementById('topo3dContainer');
+      const v2d = document.getElementById('topo2dContainer');
+      const b3d = document.getElementById('btnView3d');
+      const b2d = document.getElementById('btnView2d');
+      const label = document.getElementById('topoSubLabel');
+
+      if (mode === '3d') {
+        v3d.classList.remove('hidden');
+        v2d.classList.add('hidden');
+        b3d.className = 'px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 flex items-center gap-1.5 transition-all';
+        b2d.className = 'px-2.5 py-1 rounded text-[var(--text-muted)] hover:text-white flex items-center gap-1.5 transition-all';
+        label.innerText = 'Interactive 3D WebGL Universe';
+      } else {
+        v3d.classList.add('hidden');
+        v2d.classList.remove('hidden');
+        b2d.className = 'px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 flex items-center gap-1.5 transition-all';
+        b3d.className = 'px-2.5 py-1 rounded text-[var(--text-muted)] hover:text-white flex items-center gap-1.5 transition-all';
+        label.innerText = '2D Topological Causal DAG';
+      }
+    }
+
+    // Copy Remediation Commands
+    function copyCommands() {
+      const code = document.getElementById('incCommands').innerText;
+      navigator.clipboard.writeText(code);
+      playTone(800, 'sine', 0.1);
+      alert('Remediation script copied to clipboard!');
+    }
+
+    // Export Post-Mortem
+    function exportPostmortem() {
+      playTone(600);
+      window.open(`${API_BASE}/api/v1/export/postmortem?format=markdown`, '_blank');
+    }
+
+    // Auto-Remediation Execution Modal
+    function runRemediationModal() {
+      playTone(550);
+      const modal = document.getElementById('remediationModal');
+      modal.classList.remove('hidden');
+    }
+
+    function closeRemediationModal() {
+      document.getElementById('remediationModal').classList.add('hidden');
+    }
+
+    async function confirmRunRemediation() {
+      const btn = document.getElementById('execRemBtn');
+      const terminal = document.getElementById('remediationTerminalLogs');
+      const status = document.getElementById('remActionStatus');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Executing...';
+      playTone(350, 'square', 0.15);
+
+      try {
+        const res = await fetch(`${API_BASE}/api/v1/remediation/execute`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action_type: 'auto_execute' })
+        });
+        const data = await res.json();
+        
+        terminal.innerHTML = '';
+        for (let i = 0; i < data.execution_terminal_logs.length; i++) {
+          await new Promise(r => setTimeout(r, 120));
+          playTone(600 + i * 40, 'sine', 0.05);
+          const p = document.createElement('div');
+          p.className = 'text-emerald-400 font-mono text-[11px]';
+          p.innerText = data.execution_terminal_logs[i];
+          terminal.appendChild(p);
+          terminal.scrollTop = terminal.scrollHeight;
+        }
+
+        status.innerHTML = `<span class="text-emerald-400 font-bold">✓ ${data.action_taken}</span>`;
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> Resolved';
+        playTone(880, 'sine', 0.3);
+
+        setTimeout(() => {
+          closeRemediationModal();
+          loadAllData();
+        }, 1500);
+
+      } catch (err) {
+        alert('Remediation error: ' + err.message);
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-bolt"></i> Execute Playbook';
+      }
+    }
+
+    // Filter Logs Terminal
+    function filterLogs() {
+      const search = (document.getElementById('logSearchInput').value || '').toLowerCase();
+      const level = document.getElementById('logLevelSelect').value;
+      const container = document.getElementById('logsTerminalContainer');
+      
+      const filtered = cachedLogs.filter(l => {
+        const matchLevel = (level === 'ALL') || (l.level === level);
+        const matchSearch = !search || 
+          l.service.toLowerCase().includes(search) || 
+          l.message.toLowerCase().includes(search) ||
+          l.template.toLowerCase().includes(search);
+        return matchLevel && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div class="text-gray-500 text-center py-6">No matching logs found.</div>';
+        return;
+      }
+
+      container.innerHTML = filtered.map(l => {
+        let levelColor = 'text-gray-400';
+        if (l.level === 'CRITICAL') levelColor = 'text-red-400 font-bold bg-red-500/10 px-1 rounded';
+        else if (l.level === 'ERROR') levelColor = 'text-rose-400 font-semibold';
+        else if (l.level === 'WARN') levelColor = 'text-amber-400';
+        else if (l.level === 'INFO') levelColor = 'text-cyan-400';
+
+        const lat = l.latency_ms > 1000 ? `<span class="text-red-400 font-bold">${l.latency_ms.toFixed(0)}ms</span>` : `<span class="text-gray-400">${l.latency_ms.toFixed(0)}ms</span>`;
+
+        return `
+          <div class="hover:bg-white/5 px-2 py-0.5 rounded transition-colors flex items-start gap-2">
+            <span class="text-gray-500 shrink-0 text-[10px]">${l.timestamp.split(' ')[1] || l.timestamp}</span>
+            <span class="px-1.5 py-0.2 rounded bg-white/5 border border-white/10 text-gray-300 text-[10px] shrink-0 font-medium">${l.service}</span>
+            <span class="${levelColor} shrink-0 text-[10px]">${l.level}</span>
+            <span class="text-gray-300 flex-1 truncate">${l.message}</span>
+            <span class="text-[10px] shrink-0 font-mono">${lat}</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Chart.js Timeline Renderer
+    function renderTimeline(timeline) {
       const ctx = document.getElementById('timelineChart').getContext('2d');
       const labels = timeline.map(t => `W${t.window_index}`);
       const latencies = timeline.map(t => t.p95_latency);
       const errors = timeline.map(t => t.error_rate);
 
-      if (chartInstance) {
-        chartInstance.destroy();
-      }
+      if (chartInstance) chartInstance.destroy();
+
+      const gradientLat = ctx.createLinearGradient(0, 0, 0, 200);
+      gradientLat.addColorStop(0, 'rgba(239, 68, 68, 0.35)');
+      gradientLat.addColorStop(1, 'rgba(239, 68, 68, 0.0)');
+
+      const gradientErr = ctx.createLinearGradient(0, 0, 0, 200);
+      gradientErr.addColorStop(0, 'rgba(139, 92, 246, 0.3)');
+      gradientErr.addColorStop(1, 'rgba(139, 92, 246, 0.0)');
 
       chartInstance = new Chart(ctx, {
         type: 'line',
@@ -336,19 +1289,24 @@ SHOW max_connections;</pre>
             {
               label: 'P95 Latency (ms)',
               data: latencies,
-              borderColor: '#ef4444',
-              backgroundColor: 'rgba(239, 68, 68, 0.1)',
+              borderColor: '#ff3366',
+              backgroundColor: gradientLat,
+              borderWidth: 2.2,
+              pointRadius: 2.5,
+              pointHoverRadius: 5,
               yAxisID: 'y',
-              tension: 0.3,
+              tension: 0.35,
               fill: true
             },
             {
               label: 'Error Rate (%)',
               data: errors,
               borderColor: '#8b5cf6',
-              backgroundColor: 'rgba(139, 92, 246, 0.2)',
+              backgroundColor: gradientErr,
+              borderWidth: 2,
+              pointRadius: 2,
               yAxisID: 'y1',
-              tension: 0.3,
+              tension: 0.35,
               fill: true
             }
           ]
@@ -356,40 +1314,505 @@ SHOW max_connections;</pre>
         options: {
           responsive: true,
           maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
           scales: {
-            x: { grid: { color: 'rgba(255, 255, 255, 0.05)' }, ticks: { color: '#64748b', font: { size: 10 } } },
-            y: { position: 'left', grid: { color: 'rgba(255, 255, 255, 0.05)' }, ticks: { color: '#ef4444', font: { size: 10 } } },
-            y1: { position: 'right', grid: { drawOnChartArea: false }, ticks: { color: '#8b5cf6', font: { size: 10 } } }
+            x: {
+              grid: { color: 'rgba(255, 255, 255, 0.04)' },
+              ticks: { color: '#64748b', font: { size: 10 } }
+            },
+            y: {
+              position: 'left',
+              title: { display: true, text: 'Latency (ms)', color: '#ff3366', font: { size: 10 } },
+              grid: { color: 'rgba(255, 255, 255, 0.04)' },
+              ticks: { color: '#ff3366', font: { size: 10 } }
+            },
+            y1: {
+              position: 'right',
+              title: { display: true, text: 'Error %', color: '#8b5cf6', font: { size: 10 } },
+              grid: { drawOnChartArea: false },
+              ticks: { color: '#8b5cf6', font: { size: 10 } }
+            }
           },
           plugins: {
-            legend: { labels: { color: '#94a3b8', boxWidth: 12, font: { size: 11 } } }
+            legend: {
+              labels: { color: '#94a3b8', boxWidth: 10, font: { size: 10 } }
+            }
           }
         }
       });
     }
 
-    async function runSimulation() {
-      const btn = document.getElementById('simBtn');
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Injecting Chaos...';
-      btn.disabled = true;
-
+    // Load All Data from Backend
+    async function loadAllData() {
       try {
-        await fetch(`${API_BASE}/api/v1/chaos/simulate`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ scenario: 'payment_db_exhaustion', duration_seconds: 60 })
-        });
-        await loadData();
+        // 1. Incidents
+        const incRes = await fetch(`${API_BASE}/api/v1/incidents`);
+        const incidents = await incRes.json();
+        if (incidents && incidents.length > 0) {
+          const inc = incidents[incidents.length - 1];
+          currentIncidentData = inc;
+
+          document.getElementById('incTitle').innerText = inc.title;
+          document.getElementById('incConfidence').innerText = `${inc.confidence_percentage}%`;
+          
+          const metricConf = document.getElementById('metricConfidenceVal');
+          metricConf.setAttribute('data-target', inc.confidence_percentage);
+          metricConf.innerText = inc.confidence_percentage;
+
+          const timePart = inc.detected_at.includes(' ') ? inc.detected_at.split(' ')[1] : inc.detected_at;
+          document.getElementById('incDetectedTime').innerText = `Detected at ${timePart} UTC`;
+          document.getElementById('incAnomaly').innerText = inc.anomaly_detected_summary;
+          document.getElementById('incRootCause').innerText = inc.root_cause_identified;
+          document.getElementById('incSolution').innerText = inc.suggested_solution;
+          
+          if (inc.remediation_commands && inc.remediation_commands.length > 0) {
+            document.getElementById('incCommands').innerText = inc.remediation_commands.join('\n\n');
+          }
+
+          document.getElementById('metricIncidentTarget').innerText = `${inc.root_cause_service} cascade`;
+
+          // Format Causal Path
+          if (inc.related_services_path) {
+            const hops = inc.related_services_path.split('→').map(s => s.trim());
+            document.getElementById('incCausalPath').innerHTML = hops.map((h, idx) => {
+              const isRoot = idx === 0;
+              const bg = isRoot ? 'bg-red-500/20 text-red-300 border-red-500/30' : 'bg-amber-500/20 text-amber-300 border-amber-500/30';
+              const arrow = idx < hops.length - 1 ? '<i class="fa-solid fa-arrow-right text-[10px] text-gray-500"></i>' : '';
+              return `<span class="px-2 py-0.5 rounded ${bg} border">${h}</span> ${arrow}`;
+            }).join(' ');
+          }
+
+          // Initial tab
+          switchAgentTab('analyst');
+        }
+
+        // 2. Benchmarks
+        const benchRes = await fetch(`${API_BASE}/api/v1/benchmarks`);
+        const benchData = await benchRes.json();
+        if (benchData && benchData.results) {
+          const tbody = document.getElementById('benchmarkTable');
+          tbody.innerHTML = benchData.results.map(r => `
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="py-2.5 px-3 font-bold text-white flex items-center gap-1.5">
+                <i class="fa-solid fa-circle-nodes text-purple-400"></i>
+                ${r.model_name}
+              </td>
+              <td class="py-2.5 px-3 text-cyan-300 font-semibold">${(r.precision * 100).toFixed(1)}%</td>
+              <td class="py-2.5 px-3 text-emerald-300 font-semibold">${(r.recall * 100).toFixed(1)}%</td>
+              <td class="py-2.5 px-3 font-extrabold text-purple-300">${r.f1_score.toFixed(4)}</td>
+              <td class="py-2.5 px-3 text-gray-300">${r.avg_inference_latency_ms.toFixed(4)} ms</td>
+              <td class="py-2.5 px-3 text-emerald-400 font-bold">${r.detection_latency_steps} steps</td>
+            </tr>
+          `).join('');
+        }
+
+        // 3. Timeline
+        const timeRes = await fetch(`${API_BASE}/api/v1/metrics/timeline`);
+        const timeline = await timeRes.json();
+        if (timeline && timeline.length > 0) {
+          renderTimeline(timeline);
+        }
+
+        // 4. Logs
+        const logsRes = await fetch(`${API_BASE}/api/v1/logs/recent?limit=80`);
+        cachedLogs = await logsRes.json();
+        filterLogs();
+
+        // 5. Live Telemetry for 3D Engine
+        const telRes = await fetch(`${API_BASE}/api/v1/telemetry/live`);
+        const telemetry = await telRes.json();
+        update3DNodesTelemetry(telemetry);
+
+        animateCounters();
       } catch (err) {
-        alert('Simulation failed: ' + err.message);
-      } finally {
-        btn.innerHTML = '<i class="fa-solid fa-bolt"></i> Simulate Failure';
-        btn.disabled = false;
+        console.warn('Backend load error:', err);
       }
     }
 
-    // Initialize on load
-    loadData();
+    // ==========================================
+    // THREE.JS 3D WEBGL MICROSERVICE UNIVERSE
+    // ==========================================
+    let scene, camera, renderer, raycaster, mouse;
+    let nodeMeshes = {};
+    let linkMeshes = [];
+    let particleStreams = [];
+    let shockwaveRing = null;
+    let autoRotate = true;
+    let isDragging = false;
+    let previousMousePosition = { x: 0, y: 0 };
+    let telemetryDataCache = null;
+
+    const SERVICE_TOPOLOGY_COORDS = {
+      'api-gateway': { x: 0, y: 6.5, z: 0, label: 'Gateway' },
+      'auth-service': { x: -5.5, y: 3.2, z: -2.5, label: 'Auth' },
+      'order-service': { x: 5.5, y: 3.2, z: 2.5, label: 'Order' },
+      'inventory-service': { x: 3.5, y: -0.8, z: 5.0, label: 'Inventory' },
+      'payment-service': { x: 6.0, y: -1.2, z: -3.0, label: 'Payment' },
+      'postgres-db': { x: 0, y: -5.5, z: 0, label: 'Postgres DB' },
+      'redis-cache': { x: -6.5, y: -1.5, z: -4.0, label: 'Redis' },
+      'payment-gateway-external': { x: 7.5, y: -5.0, z: -5.5, label: 'External Gateway' }
+    };
+
+    const SERVICE_LINKS = [
+      { from: 'api-gateway', to: 'auth-service' },
+      { from: 'api-gateway', to: 'order-service' },
+      { from: 'auth-service', to: 'redis-cache' },
+      { from: 'order-service', to: 'inventory-service' },
+      { from: 'order-service', to: 'payment-service' },
+      { from: 'order-service', to: 'postgres-db' },
+      { from: 'inventory-service', to: 'postgres-db' },
+      { from: 'payment-service', to: 'postgres-db' },
+      { from: 'payment-service', to: 'payment-gateway-external' }
+    ];
+
+    function init3DTopology() {
+      const container = document.getElementById('topo3dContainer');
+      const canvas = document.getElementById('topo3dCanvas');
+      if (!canvas) return;
+
+      const width = container.clientWidth || 400;
+      const height = container.clientHeight || 340;
+
+      scene = new THREE.Scene();
+      scene.fog = new THREE.FogExp2(0x06080e, 0.035);
+
+      camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+      camera.position.set(0, 2, 19);
+
+      renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+      renderer.setSize(width, height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      raycaster = new THREE.Raycaster();
+      mouse = new THREE.Vector2();
+
+      // Lighting
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+      scene.add(ambientLight);
+
+      const dirLight = new THREE.DirectionalLight(0x00f0ff, 1.2);
+      dirLight.position.set(10, 20, 15);
+      scene.add(dirLight);
+
+      const purpleLight = new THREE.PointLight(0x8b5cf6, 1.5, 30);
+      purpleLight.position.set(-10, -10, 10);
+      scene.add(purpleLight);
+
+      // Create 3D Nodes
+      Object.keys(SERVICE_TOPOLOGY_COORDS).forEach(key => {
+        const coord = SERVICE_TOPOLOGY_COORDS[key];
+        const group = new THREE.Group();
+        group.position.set(coord.x, coord.y, coord.z);
+
+        // Core Sphere
+        const geometry = new THREE.SphereGeometry(1.0, 32, 32);
+        const material = new THREE.MeshStandardMaterial({
+          color: 0x10b981,
+          emissive: 0x059669,
+          emissiveIntensity: 0.6,
+          roughness: 0.3,
+          metalness: 0.8
+        });
+        const sphere = new THREE.Mesh(geometry, material);
+        sphere.userData = { serviceId: key };
+        group.add(sphere);
+
+        // Outer Wireframe Glow Aura
+        const wireGeo = new THREE.IcosahedronGeometry(1.35, 1);
+        const wireMat = new THREE.MeshBasicMaterial({
+          color: 0x00f0ff,
+          wireframe: true,
+          transparent: true,
+          opacity: 0.35
+        });
+        const wireframe = new THREE.Mesh(wireGeo, wireMat);
+        group.add(wireframe);
+
+        scene.add(group);
+        nodeMeshes[key] = { group, sphere, wireframe, coord };
+      });
+
+      // Expanding Shockwave Ripple for Root Cause
+      const ringGeo = new THREE.RingGeometry(1.2, 1.5, 32);
+      const ringMat = new THREE.MeshBasicMaterial({
+        color: 0xff3366,
+        side: THREE.DoubleSide,
+        transparent: true,
+        opacity: 0.8
+      });
+      shockwaveRing = new THREE.Mesh(ringGeo, ringMat);
+      shockwaveRing.rotation.x = Math.PI / 2;
+      scene.add(shockwaveRing);
+
+      // Create 3D Links & Flowing Packet Particles
+      SERVICE_LINKS.forEach(link => {
+        const p1 = SERVICE_TOPOLOGY_COORDS[link.from];
+        const p2 = SERVICE_TOPOLOGY_COORDS[link.to];
+
+        const lineGeo = new THREE.BufferGeometry().setFromPoints([
+          new THREE.Vector3(p1.x, p1.y, p1.z),
+          new THREE.Vector3(p2.x, p2.y, p2.z)
+        ]);
+        const lineMat = new THREE.LineBasicMaterial({
+          color: 0x334155,
+          transparent: true,
+          opacity: 0.5,
+          linewidth: 1.5
+        });
+        const lineMesh = new THREE.Line(lineGeo, lineMat);
+        lineMesh.userData = { from: link.from, to: link.to };
+        scene.add(lineMesh);
+        linkMeshes.push(lineMesh);
+
+        // Animated Energy Packet Particle
+        const packetGeo = new THREE.SphereGeometry(0.18, 12, 12);
+        const packetMat = new THREE.MeshBasicMaterial({ color: 0x00f0ff });
+        const packet = new THREE.Mesh(packetGeo, packetMat);
+        scene.add(packet);
+
+        particleStreams.push({
+          mesh: packet,
+          from: new THREE.Vector3(p1.x, p1.y, p1.z),
+          to: new THREE.Vector3(p2.x, p2.y, p2.z),
+          progress: Math.random(),
+          speed: 0.007 + Math.random() * 0.005,
+          isFailureLink: false
+        });
+      });
+
+      // Mouse Orbit & Interaction Listeners
+      canvas.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        previousMousePosition = { x: e.clientX, y: e.clientY };
+      });
+
+      window.addEventListener('mouseup', () => { isDragging = false; });
+
+      canvas.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        mouse.x = ((e.clientX - rect.left) / canvas.clientWidth) * 2 - 1;
+        mouse.y = -((e.clientY - rect.top) / canvas.clientHeight) * 2 + 1;
+
+        if (isDragging) {
+          const deltaX = e.clientX - previousMousePosition.x;
+          const deltaY = e.clientY - previousMousePosition.y;
+
+          scene.rotation.y += deltaX * 0.008;
+          scene.rotation.x += deltaY * 0.008;
+          autoRotate = false;
+          previousMousePosition = { x: e.clientX, y: e.clientY };
+        }
+      });
+
+      canvas.addEventListener('wheel', (e) => {
+        camera.position.z += e.deltaY * 0.015;
+        camera.position.z = Math.max(8, Math.min(30, camera.position.z));
+      });
+
+      canvas.addEventListener('click', onNodeClick);
+
+      // Window resize
+      window.addEventListener('resize', () => {
+        const w = container.clientWidth || 400;
+        const h = container.clientHeight || 340;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+      });
+
+      // Start 3D Render Loop
+      animate3D();
+    }
+
+    function onNodeClick(event) {
+      raycaster.setFromCamera(mouse, camera);
+      const spheres = Object.values(nodeMeshes).map(n => n.sphere);
+      const intersects = raycaster.intersectObjects(spheres);
+
+      if (intersects.length > 0) {
+        const hit = intersects[0].object;
+        const svcId = hit.userData.serviceId;
+        showNodeInspectionHUD(svcId);
+        playTone(680, 'sine', 0.12);
+      }
+    }
+
+    function showNodeInspectionHUD(svcId) {
+      const hud = document.getElementById('node3dHud');
+      hud.classList.remove('hidden');
+
+      const data = telemetryDataCache && telemetryDataCache.nodes ? telemetryDataCache.nodes[svcId] : null;
+      document.getElementById('hudNodeName').innerText = svcId;
+
+      if (data) {
+        document.getElementById('hudNodeStatus').innerText = data.status.toUpperCase();
+        document.getElementById('hudNodeStatus').className = data.status === 'critical' ? 'px-1.5 py-0.2 rounded text-[9px] font-bold bg-red-500/20 text-red-400' : (data.status === 'warning' ? 'px-1.5 py-0.2 rounded text-[9px] font-bold bg-amber-500/20 text-amber-400' : 'px-1.5 py-0.2 rounded text-[9px] font-bold bg-emerald-500/20 text-emerald-400');
+        document.getElementById('hudCpu').innerText = `${data.cpu.toFixed(1)}%`;
+        document.getElementById('hudMem').innerText = `${data.memory.toFixed(1)}%`;
+        document.getElementById('hudLat').innerText = `${data.latency.toFixed(0)} ms`;
+        document.getElementById('hudErr').innerText = `${data.error_rate.toFixed(1)}%`;
+      }
+    }
+
+    function update3DNodesTelemetry(telemetry) {
+      if (!telemetry || !telemetry.nodes) return;
+      telemetryDataCache = telemetry;
+
+      let rootCauseCoord = null;
+
+      Object.keys(telemetry.nodes).forEach(svcId => {
+        const info = telemetry.nodes[svcId];
+        const meshObj = nodeMeshes[svcId];
+        if (!meshObj) return;
+
+        if (info.is_root_cause) {
+          meshObj.sphere.material.color.setHex(0xff3366);
+          meshObj.sphere.material.emissive.setHex(0x990022);
+          meshObj.wireframe.material.color.setHex(0xff3366);
+          rootCauseCoord = meshObj.coord;
+        } else if (info.status === 'warning') {
+          meshObj.sphere.material.color.setHex(0xf59e0b);
+          meshObj.sphere.material.emissive.setHex(0xb45309);
+          meshObj.wireframe.material.color.setHex(0xf59e0b);
+        } else {
+          meshObj.sphere.material.color.setHex(0x10b981);
+          meshObj.sphere.material.emissive.setHex(0x047857);
+          meshObj.wireframe.material.color.setHex(0x00f0ff);
+        }
+      });
+
+      if (rootCauseCoord && shockwaveRing) {
+        shockwaveRing.position.set(rootCauseCoord.x, rootCauseCoord.y, rootCauseCoord.z);
+        shockwaveRing.visible = true;
+      } else if (shockwaveRing) {
+        shockwaveRing.visible = false;
+      }
+    }
+
+    function update3DThemeColors() {
+      // Refresh colors if theme shifts
+    }
+
+    function reset3DCamera() {
+      playTone(500);
+      scene.rotation.set(0, 0, 0);
+      camera.position.set(0, 2, 19);
+    }
+
+    function toggleAutoRotate() {
+      autoRotate = !autoRotate;
+      playTone(450);
+      document.getElementById('autoRotateBtn').classList.toggle('text-cyan-400');
+    }
+
+    // Main 3D Animation Loop
+    let timeClock = 0;
+    function animate3D() {
+      requestAnimationFrame(animate3D);
+      timeClock += 0.02;
+
+      // Auto Orbit
+      if (autoRotate) {
+        scene.rotation.y += 0.003;
+      }
+
+      // Pulse Wireframe & Spheres
+      Object.values(nodeMeshes).forEach(n => {
+        n.wireframe.rotation.x += 0.01;
+        n.wireframe.rotation.y += 0.01;
+        const scale = 1.0 + Math.sin(timeClock * 2.5) * 0.04;
+        n.sphere.scale.set(scale, scale, scale);
+      });
+
+      // Shockwave Ripple
+      if (shockwaveRing && shockwaveRing.visible) {
+        const ringScale = 1.0 + ((timeClock * 1.5) % 3.0);
+        shockwaveRing.scale.set(ringScale, ringScale, ringScale);
+        shockwaveRing.material.opacity = Math.max(0, 1.0 - (ringScale / 3.0));
+      }
+
+      // Energy Packet Particle Streams
+      particleStreams.forEach(stream => {
+        stream.progress += stream.speed;
+        if (stream.progress > 1.0) stream.progress = 0;
+        stream.mesh.position.lerpVectors(stream.from, stream.to, stream.progress);
+      });
+
+      renderer.render(scene, camera);
+    }
+
+    // Ambient Canvas Floating Cyber Grid Particles
+    function initAmbientCanvas() {
+      const container = document.getElementById('ambientCanvasContainer');
+      const canvas = document.createElement('canvas');
+      container.appendChild(canvas);
+      const ctx = canvas.getContext('2d');
+
+      let w = canvas.width = window.innerWidth;
+      let h = canvas.height = window.innerHeight;
+
+      const particles = [];
+      for (let i = 0; i < 45; i++) {
+        particles.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.35,
+          vy: (Math.random() - 0.5) * 0.35,
+          size: Math.random() * 2 + 1
+        });
+      }
+
+      window.addEventListener('resize', () => {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      });
+
+      function loop() {
+        ctx.clearRect(0, 0, w, h);
+        ctx.fillStyle = 'rgba(0, 240, 255, 0.4)';
+        ctx.strokeStyle = 'rgba(0, 240, 255, 0.04)';
+
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0) p.x = w;
+          if (p.x > w) p.x = 0;
+          if (p.y < 0) p.y = h;
+          if (p.y > h) p.y = 0;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fill();
+
+          for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
+            const dx = p.x - p2.x;
+            const dy = p.y - p2.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 120) {
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(loop);
+      }
+      loop();
+    }
+
+    // Initialization on Page Load
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('tracemind_theme') || 'cyberpunk';
+      setTheme(savedTheme);
+      initCardTilt();
+      initAmbientCanvas();
+      init3DTopology();
+      loadAllData();
+      setInterval(loadAllData, 8000); // Poll telemetry every 8s
+    });
   </script>
 </body>
 </html>
